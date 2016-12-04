@@ -1,13 +1,39 @@
 $(document).ready(function() {
-	var ganttFull = $('#gantt-full');
-	var ingredientsFull = $('#ingredients-full');
-	var chartFull = $('#chart-full');
-	var startCookingAtFull = $('#start-cooking-at-full');
-	var chartWidth = $(document).width() - parseInt(ingredientsFull.css('width'), 10);
+	var gantt, ingredients, chart, chartWidth;
+	var originalGanttWidth = '1000px';
+	var originalGanttHeight = '500px';
+	var originalGanttPosition = 'relative';
+	var originalChartWidth = '760px';
 
-	ganttFull.css('width', $(document).width());
-	ganttFull.css('height', $(document).height());
-	chartFull.css('width', chartWidth);
-	console.log(chartWidth);
-	startCookingAtFull.css('width', chartWidth);
+	gantt = $('.gantt');
+	ingredients = $('.ingredients');
+	chart = $('.chart');
+
+	$('#full-screen').click(function() {
+		fullScreen(gantt, ingredients, chart, chartWidth);
+	});
+
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) {
+			shrinkScreen(gantt, ingredients, chart, chartWidth, originalGanttWidth, originalGanttHeight, originalGanttPosition, originalChartWidth);
+		}
+	});
 });
+
+function fullScreen (gantt, ingredients, chart, chartWidth) {
+	gantt.css('width', $(document).width());
+	gantt.css('height', $(document).height());
+	gantt.css('position', 'absolute');
+	gantt.css('top', '0');
+	gantt.css('left', '0');
+	chartWidth = $(document).width() - parseInt(ingredients.css('width'), 10);
+	chartWidth -= 4;
+	chart.css('width', chartWidth);
+}
+
+function shrinkScreen (gantt, ingredients, chart, chartWidth, originalGanttWidth, originalGanttHeight, originalGanttPosition, originalChartWidth) {
+	gantt.css('width', originalGanttWidth);
+	gantt.css('height', originalGanttHeight);
+	gantt.css('position', originalGanttPosition);
+	chart.css('width', originalChartWidth);
+}
