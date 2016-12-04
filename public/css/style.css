@@ -1,0 +1,164 @@
+img[src="/img/LogoFill.png"] {
+	width: auto;
+	height: 100%;
+	border-right: solid 1px black;
+}
+
+input.main-search {
+	border: solid 1px black;
+	border-radius: 100px;
+	width: 220px;
+	height: 25px;
+	float: right;
+	margin-top: 12px;
+	margin-right: 15px;
+	padding: 0 10px;
+}
+
+img[src="/img/Bookmark.png"] {
+	width: auto;
+	height: 50%;
+	float: right;
+	margin-top: 12px;
+	margin-right: 15px;
+}
+
+div.upper {
+	width: 800px;
+	height: 250px;
+	display: block;
+	margin: -25px auto;
+}
+
+div.upper * {
+	display: block;
+	margin: auto;
+}
+
+div.upper h1 {
+	margin-top: 20px;
+}
+
+img[src="/img/Pie.png"] {
+	width: 40px;
+	height: auto;
+}
+
+ul.ratings-and-comment {
+	height: 60px;
+	width: 180px;
+}
+
+ul.ratings-and-comment li {
+	height: 100%;
+	float: left;
+	width: 30px;
+}
+
+ul.ratings-and-comment li img {
+	width: 20px;
+	height: auto;
+	padding: 0 5px;
+}
+
+img[src="/img/Comment.png"] {
+	margin-top: 2px;
+}
+
+div.how-many-serve-div {
+	width: 410px;
+}
+
+h3.how-many-serve-h3, select.how-many-serve-select {
+	float: left;
+	margin: 0 10px;
+}
+
+select.how-many-serve-select {
+	margin-top: -5px;
+}
+
+div.gantt {
+	width: 1000px;
+	height: 500px;
+	border: solid 2px black;
+	display: block;
+	margin: auto;
+	background: white;
+}
+
+div.ingredients {
+	width: 240px;
+	height: 100%;
+	background: #e27191;
+	border-right: solid 2px black;
+	box-sizing: border-box;
+	float: left;
+	padding: 20px;
+}
+
+div.start-cooking-at {
+	width: 760px;
+	height: 40px;
+	background: #e0e0e0;
+	border-bottom: solid 1px black;
+	box-sizing: border-box;
+	float: left;
+}
+
+div.ingredients h4 {
+	padding-bottom: 10px;
+	border-bottom: solid 1px white;
+}
+
+div.ingredients li {
+	color: white;
+	border-bottom: solid 1px black;
+	padding: 15px 0 10px;
+	font-size: .8em;
+}
+
+div.start-cooking-at h6 {
+	margin-top: 12px;
+	margin-left: 10px;
+}
+
+div.start-cooking-at button {
+	float: right;
+	margin-right: 10px;
+	margin-top: -5px;
+}
+
+span.underline {
+	text-decoration: underline;
+}
+
+div#gantt-full {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10001;
+}
+
+div#ingredients-full {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
