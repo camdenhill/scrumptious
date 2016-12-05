@@ -150,7 +150,12 @@ p#full-screen:hover {
 	cursor: pointer;
 }
 
-
+footer p {
+	color: #bbb;
+	font-size: .7em;
+	font-weight: 100;
+	padding: 8px 0 0 10px;
+}
 
 
 

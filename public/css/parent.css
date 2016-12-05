@@ -66,3 +66,13 @@ button {
 	font-weight: 400;
 }
 
+button:hover {
+	cursor: pointer;
+}
+
+footer {
+	height: 30px;
+	width: 100%;
+	margin-top: 40px;
+	background: #222;
+}
