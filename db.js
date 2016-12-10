@@ -1,22 +1,24 @@
 var mysql = require('mysql'),
-	async = require('async');
-
-var PRODUCTION_DB = 'app_prod_database',
-	TEST_DB = 'app_test_db';
 
 var connection = mysql.createConnection({
 	host: config.mysql.host,
 	user: config.mysql.user,
 	password: config.mysql.password
-})
+});
 
-connection.connect();
+connection.connect(function(err) {
+	if (err) {
+		console.log('Error connecting to database');
+		return;
+	}
+	console.log('Connection established');
+});
 
-var sql = 'SELECT * FROM mysql.user';
+// var sql = 'SELECT * FROM recipes.ingredients';
 
-connection.query(sql, function (err, rows, fields) {
-	if (err) throw err;
-	console.log(rows[0].user);
-})
+// connection.query(sql, function (err, rows, fields) {
+// 	if (err) throw err;
+// 	console.log(rows[0]);
+// })
 
 connection.end();
