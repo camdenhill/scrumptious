@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
 });
 
 exports.connectDB = function() {
-	console.log('config.development.database.host');
+	console.log(config.development.database.host);
 	connection.connect(function(err) {
 		if (err) {
 			console.log('Error connecting to database');
