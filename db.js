@@ -6,13 +6,15 @@ var connection = mysql.createConnection({
 	password: config.mysql.password
 });
 
-connection.connect(function(err) {
-	if (err) {
-		console.log('Error connecting to database');
-		return;
-	}
-	console.log('Connection established');
-});
+exports.connectDB = function() {
+	connection.connect(function(err) {
+		if (err) {
+			console.log('Error connecting to database');
+			return;
+		}
+		console.log('Connection established');
+	});
+}
 
 // var sql = 'SELECT * FROM recipes.ingredients';
 
