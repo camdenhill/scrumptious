@@ -3,6 +3,7 @@ var config = require('./config.js');
 
 var connection = mysql.createConnection({
 	host: config.development.database.host,
+	port: config.development.database.port,
 	user: config.development.database.username,
 	password: config.development.database.password
 });
