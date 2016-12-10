@@ -1,6 +1,5 @@
 var express = require('express')
 var app = express()
-var config = require('./config.json')
 var db = require('./db.js');
 
 app.use(express.static('public'));
