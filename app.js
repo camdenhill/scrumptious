@@ -15,6 +15,10 @@ module.exports = function(app)
 		res.render('recipes.html')
 	})
 
+	app.get('/insert', function (req, res) {
+		res.render('insert.php')
+	})
+
 	app.use(function(req, res, next) {
 		res.status(404).render('404.html');
 	});
