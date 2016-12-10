@@ -9,6 +9,8 @@ var connection = mysql.createConnection({
 
 exports.connectDB = function() {
 	console.log(config.development.database.host);
+	console.log(config.development.database.username);
+	console.log(config.development.database.password);
 	connection.connect(function(err) {
 		if (err) {
 			console.log('Error connecting to database');
