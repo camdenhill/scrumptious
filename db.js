@@ -17,6 +17,7 @@ exports.connectDB = function() {
 		}
 		console.log('Connection established');
 	});
+	connection.end();
 }
 
 // var sql = 'SELECT * FROM recipes.ingredients';
@@ -26,4 +27,4 @@ exports.connectDB = function() {
 // 	console.log(rows[0]);
 // })
 
-connection.end();
+// connection.end();
