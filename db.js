@@ -17,14 +17,11 @@ exports.connectDB = function() {
 		}
 		console.log('Connection established');
 	});
+	var sql = 'SELECT * FROM recipes.ingredients';
+
+	connection.query(sql, function (err, rows, fields) {
+		if (err) throw err;
+		console.log(rows[0]);
+	})
 	connection.end();
 }
-
-// var sql = 'SELECT * FROM recipes.ingredients';
-
-// connection.query(sql, function (err, rows, fields) {
-// 	if (err) throw err;
-// 	console.log(rows[0]);
-// })
-
-// connection.end();
