@@ -1,17 +1,15 @@
 var mysql = require('mysql');
 var config = require('./config.js');
 
-var connection = mysql.createConnection({
-	host: config.development.database.host,
-	port: config.development.database.port,
-	user: config.development.database.username,
-	password: config.development.database.password
-});
+var connection;
 
 exports.connectDB = function() {
-	console.log(config.development.database.host);
-	console.log(config.development.database.username);
-	console.log(config.development.database.password);
+	connection = mysql.createConnection({
+		host: config.development.database.host,
+		port: config.development.database.port,
+		user: config.development.database.username,
+		password: config.development.database.password
+	});
 	connection.connect(function(err) {
 		if (err) {
 			console.log('Error connecting to database');
