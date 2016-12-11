@@ -9,7 +9,7 @@ exports.insertRecipe = function(colorHex, recipeName, recipeSource) {
 		port: config.development.database.port,
 		user: config.development.database.username,
 		password: config.development.database.password,
-		database: config.development.database.db;
+		database: config.development.database.db
 	});
 	connection.connect(function(err) {
 		if (err) {
