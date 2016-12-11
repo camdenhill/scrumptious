@@ -1,5 +1,4 @@
 var db = require('./db.js');
-var recipes = require('./recipes.js');
 
 module.exports = function(app)
 {
@@ -22,7 +21,9 @@ module.exports = function(app)
 		db.getRecipe(req.params.recipeID, function (err, results) {
 			if (err) throw err;
 			else {
-				recipes.renderRecipe(results);
+				res.write('<html><head></head><body>');
+				res.write('<p>' + results[0].recipeID + '</p>');
+				res.write('</body></html>');
 			}
 		});
 	})
