@@ -29,7 +29,7 @@ exports.insertRecipe = function(colorHex, recipeName, recipeSource) {
 	connection.end();
 }
 
-exports.getRecipe = function(recipeID) {
+exports.getRecipe = function(recipeID, callback) {
 	console.log(recipeID);
 	connection = mysql.createConnection({
 		host: config.development.database.host,
@@ -52,5 +52,6 @@ exports.getRecipe = function(recipeID) {
 	connection.query(sql, function (err, res) {
 		connection.end();
 		console.log(res);
+		callback(err, res);
 	});
 }
