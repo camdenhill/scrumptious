@@ -20,7 +20,7 @@ module.exports = function(app)
 	app.get('/recipes/:recipeID', function (req, res) {
 		db.getRecipe(req.params.recipeID);
 		res.render('recipes.html')
-		document.getElementById('step1').textContent = 'step1';
+		document.getElementById('step1').textContent = req.params.recipeID;
 	})
 
 	app.get('/insert', function (req, res) {
