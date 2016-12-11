@@ -19,7 +19,7 @@ module.exports = function(app)
 		res.render('insert.html')
 	})
 
-	app.post('/insert', function(req, res) {
+	app.post('/inserted', function(req, res) {
 		console.log(req.body.test)
 	})
 
