@@ -22,7 +22,7 @@ module.exports = function(app)
 			if (err) throw err;
 			else {
 				console.log(results)
-				res.render('recipes.ejs', {
+				res.render('recipes', {
 					recipes : results
 				});
 			}
