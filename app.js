@@ -20,9 +20,12 @@ module.exports = function(app)
 	app.get('/recipes/:recipeID', function (req, res) {
 		db.getRecipe(req.params.recipeID, function (err, results) {
 			if (err) throw err;
-			else res.send(results);
+			else {
+				res.write('<html><head></head><body>');
+				res.write('<p>' + results[0].recipeID + '</p>');
+				res.write('</body></html>');
+			}
 		});
-		// res.render('recipes.html');
 	})
 
 	app.get('/insert', function (req, res) {
