@@ -1,5 +1,4 @@
 var db = require('./db.js');
-var recipes = require('./recipes.js');
 
 module.exports = function(app)
 {
