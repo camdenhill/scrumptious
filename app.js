@@ -22,7 +22,7 @@ module.exports = function(app)
 		db.getRecipe(req.params.recipeID, function (err, results) {
 			if (err) throw err;
 			else {
-				recipes.renderRecipe(res, results);
+				res.render('/recipes');
 			}
 		});
 	})
