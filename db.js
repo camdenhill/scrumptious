@@ -50,10 +50,8 @@ exports.getRecipe = function(recipeID) {
 	var sql = 'SELECT * FROM metadata';
 	var data;
 	connection.query(sql, function (err, res) {
-		data = res;
-		// console.log(data);
+		connection.end();
+		return res;
 	});
-	console.log(data);
-	connection.end();
 
 }
