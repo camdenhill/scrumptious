@@ -21,7 +21,7 @@ module.exports = function(app)
 		db.getRecipe(req.params.recipeID, function (err, results) {
 			if (err) throw err;
 			else {
-				res.render('/recipes');
+				res.render('recipes.html');
 			}
 		});
 	})
