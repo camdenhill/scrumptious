@@ -20,7 +20,10 @@ module.exports = function(app)
 	})
 
 	app.post('/inserted', function(req, res) {
-		console.log(req.body.test)
+		console.log(req.body.colorHex)
+		console.log(req.body.recipeName)
+		console.log(req.body.recipeSource)
+
 		res.render('insert.html')
 	})
 
