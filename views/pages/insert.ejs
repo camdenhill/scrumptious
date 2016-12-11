@@ -7,11 +7,7 @@
 </head>
 
 <body>
-	<nav>	<!--Contains logo, searchbar, profile icon, bookmarks-->
-		<img src="/img/LogoFill.png">
-		<img src="/img/Bookmark.png">
-		<input type="text" class="main-search"/>
-	</nav>
+	<% include ../partials/nav %>
 	<form method="post" action="/inserted">
 		<label for="colorHex">Hex Color</label>
 		<input type="text" name="colorHex">
