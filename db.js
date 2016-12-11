@@ -51,7 +51,7 @@ exports.getRecipe = function(recipeID) {
 	connection.query(sql, function (err, res) {
 		if (err) throw err;
 		console.log('Successful SELECT');
-		console.log(rows);
+		console.log(res);
 	});
 	connection.end();
 }
