@@ -17,6 +17,10 @@ module.exports = function(app)
 		res.render('recipes.html')
 	})
 
+	app.get('/recipes/:recipeID', function (req, res) {
+		console.log(req.params.recipeID);
+	})
+
 	app.get('/insert', function (req, res) {
 		res.render('insert.html')
 	})
