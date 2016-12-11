@@ -53,6 +53,7 @@ exports.getRecipe = function(recipeID) {
 		data = res;
 		console.log(data);
 	});
+	console.log(data);
 	connection.end();
 
 }
