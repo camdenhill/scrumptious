@@ -51,6 +51,7 @@ exports.getRecipe = function(recipeID) {
 	var data;
 	connection.query(sql, function (err, res) {
 		connection.end();
+		console.log(res);
 		return res;
 	});
 
