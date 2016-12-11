@@ -25,3 +25,9 @@ exports.connectDB = function() {
 	})
 	connection.end();
 }
+
+// var recipe = { colorHex: '', recipeName: '', recipeSource: '' };
+// con.query('INSERT INTO metadata SET ?', recipe, function (err, res) {
+// 	if(err) throw err;
+// 	console.log('Last insert ID:', res.insertId);
+// });

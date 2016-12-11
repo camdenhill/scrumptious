@@ -16,7 +16,11 @@ module.exports = function(app)
 	})
 
 	app.get('/insert', function (req, res) {
-		res.render('insert.php')
+		res.render('insert.html')
+	})
+
+	app.post('/insert', function(req, res) {
+		console.log(req.body.test)
 	})
 
 	app.use(function(req, res, next) {

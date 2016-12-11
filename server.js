@@ -3,6 +3,11 @@ var app = express()
 var db = require('./db.js');
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
+
+app.use(bodyParser.json());
 
 require('./app')(app);
 app.set('views',__dirname + '/views');
