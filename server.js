@@ -16,8 +16,7 @@ app.set('views',__dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
+var connection;
 var server = app.listen(3000, function() {
 	console.log('Listening on port 3000!')
-	db.connectDB();
-	// console.log(config.mysql.host);
 })

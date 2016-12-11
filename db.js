@@ -3,7 +3,7 @@ var config = require('./config.js');
 
 var connection;
 
-exports.connectDB = function() {
+exports.insertRecipe = function(colorHex, recipeName, recipeSource) {
 	connection = mysql.createConnection({
 		host: config.development.database.host,
 		port: config.development.database.port,
@@ -17,17 +17,16 @@ exports.connectDB = function() {
 		}
 		console.log('Connection established');
 	});
-	var sql = 'SELECT * FROM recipes.metadata';
 
-	connection.query(sql, function (err, rows, fields) {
+	// connection.query(sql, function (err, rows, fields) {
+	// 	if (err) throw err;
+	// 	console.log(rows[0]['colorHex']);
+	// })
+	var recipe = { colorHex: colorHex, recipeName: recipeName, recipeSource: recipeSource };
+	connection.query('INSERT INTO metadata SET ?', recipe, function (err, res) {
 		if (err) throw err;
-		console.log(rows[0]['colorHex']);
-	})
+		// console.log('Last insert ID:', res.insertId);
+		console.log('Successful');
+	});
 	connection.end();
 }
-
-// var recipe = { colorHex: '', recipeName: '', recipeSource: '' };
-// con.query('INSERT INTO metadata SET ?', recipe, function (err, res) {
-// 	if(err) throw err;
-// 	console.log('Last insert ID:', res.insertId);
-// });
