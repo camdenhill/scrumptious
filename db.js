@@ -17,7 +17,7 @@ exports.connectDB = function() {
 		}
 		console.log('Connection established');
 	});
-	var sql = 'SELECT * FROM recipes.ingredients';
+	var sql = 'SELECT * FROM recipes.metadata';
 
 	connection.query(sql, function (err, rows, fields) {
 		if (err) throw err;
