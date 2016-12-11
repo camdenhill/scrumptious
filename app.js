@@ -27,7 +27,7 @@ module.exports = function(app)
 	})
 
 	app.get('/insert', function (req, res) {
-		res.render('insert.html')
+		res.render('insert.ejs')
 	})
 
 	app.post('/inserted', function(req, res) {
