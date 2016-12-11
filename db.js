@@ -21,7 +21,7 @@ exports.connectDB = function() {
 
 	connection.query(sql, function (err, rows, fields) {
 		if (err) throw err;
-		console.log('successful');
+		console.log(rows);
 	})
 	connection.end();
 }
