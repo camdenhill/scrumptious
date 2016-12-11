@@ -21,6 +21,7 @@ module.exports = function(app)
 
 	app.post('/inserted', function(req, res) {
 		console.log(req.body.test)
+		res.render('insert.html')
 	})
 
 	app.use(function(req, res, next) {
