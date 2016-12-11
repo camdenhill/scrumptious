@@ -3,6 +3,8 @@ var app = express()
 var db = require('./db.js');
 
 app.use(express.static('public'));
+
+var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
