@@ -24,7 +24,7 @@ module.exports = function(app)
 		console.log(req.body.recipeName)
 		console.log(req.body.recipeSource)
 
-		res.render('insert.html')
+		res.render('success.html')
 	})
 
 	app.use(function(req, res, next) {
