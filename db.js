@@ -54,5 +54,5 @@ exports.getRecipe = function(recipeID) {
 	});
 	connection.end();
 
-	return data.json();
+	console.log(data);
 }
