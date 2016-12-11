@@ -52,9 +52,9 @@ exports.getRecipe = function(recipeID) {
 		if (err) throw err;
 		console.log('Successful SELECT');
 		console.log(res.length);
-		// for (var i = 0; i < res.length; i++) {
-		// 	console.log(res[i]);
-		// }
+		for (var i = 0; i < res.length; i++) {
+			console.log(res[i]);
+		}
 	});
 	connection.end();
 }
