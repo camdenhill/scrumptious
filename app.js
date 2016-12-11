@@ -1,3 +1,5 @@
+var db = require('./db.js');
+
 module.exports = function(app)
 {
 	app.route('/')
@@ -24,7 +26,7 @@ module.exports = function(app)
 		colorHex = req.body.colorHex;
 		recipeName = req.body.recipeName;
 		recipeSource = req.body.recipeSource;
-		
+
 		db.insertRecipe(colorHex, recipeName, recipeSource);
 		res.render('success.html')
 	})
