@@ -47,7 +47,6 @@ exports.getRecipe = function(recipeID) {
 		console.log('Connection established');
 	});
 
-	var recipe = { colorHex: colorHex, recipeName: recipeName, recipeSource: recipeSource };
 	var sql = 'SELECT * FROM metadata';
 	connection.query(sql, function (err, res) {
 		if (err) throw err;
