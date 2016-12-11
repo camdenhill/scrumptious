@@ -18,7 +18,7 @@ module.exports = function(app)
 	})
 
 	app.get('/recipes/:recipeID', function (req, res) {
-		db.getRecipe(req.params.recipeID);
+		var data = db.getRecipe(req.params.recipeID);
 		console.log(data);
 		res.render('recipes.html');
 	})
