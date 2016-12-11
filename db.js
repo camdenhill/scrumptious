@@ -21,7 +21,7 @@ exports.connectDB = function() {
 
 	connection.query(sql, function (err, rows, fields) {
 		if (err) throw err;
-		console.log(rows);
+		console.log(rows[0]['colorHex']);
 	})
 	connection.end();
 }
