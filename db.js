@@ -8,7 +8,8 @@ exports.insertRecipe = function(colorHex, recipeName, recipeSource) {
 		host: config.development.database.host,
 		port: config.development.database.port,
 		user: config.development.database.username,
-		password: config.development.database.password
+		password: config.development.database.password,
+		database: config.development.database.db;
 	});
 	connection.connect(function(err) {
 		if (err) {
