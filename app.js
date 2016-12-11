@@ -14,14 +14,14 @@ module.exports = function(app)
 	*/
 
 	app.get('/recipes', function (req, res) {
-		res.render('recipes.html')
+		res.render('recipes.ejs')
 	})
 
 	app.get('/recipes/:recipeID', function (req, res) {
 		db.getRecipe(req.params.recipeID, function (err, results) {
 			if (err) throw err;
 			else {
-				res.render('recipes.html');
+				res.render('recipes.ejs');
 			}
 		});
 	})
@@ -37,10 +37,10 @@ module.exports = function(app)
 		recipeSource = req.body.recipeSource;
 
 		db.insertRecipe(colorHex, recipeName, recipeSource);
-		res.render('success.html')
+		res.render('success.ejs')
 	})
 
 	app.use(function(req, res, next) {
-		res.status(404).render('404.html');
+		res.status(404).render('404.ejs');
 	});
 }
