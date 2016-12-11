@@ -59,7 +59,9 @@
 		</div>
 	</div>
 
-	<step id="step1"></step>
+	<% recipes.forEach(function(recipe) { %>
+		<step><%= recipe.recipeName %></step>
+	<% }); %>
 
 	<footer>
 		<p>Camden Hill 2016</p>
