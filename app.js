@@ -18,7 +18,7 @@ module.exports = function(app)
 	})
 
 	app.get('/recipes/:recipeID', function (req, res) {
-		console.log(req.params.recipeID);
+		db.getRecipe(req.params.recipeID);
 	})
 
 	app.get('/insert', function (req, res) {
