@@ -21,8 +21,8 @@ module.exports = function(app)
 		db.getRecipe(req.params.recipeID, function (err, results) {
 			if (err) throw err;
 			else {
+				console.log(results)
 				res.render('recipes.ejs', {
-					console.log(results)
 					recipes : results
 				});
 			}
