@@ -23,7 +23,7 @@ module.exports = function(app)
 			else {
 				console.log(results)
 				res.render('recipes', {
-					recipes : results
+					ingredients : results
 				});
 			}
 		});

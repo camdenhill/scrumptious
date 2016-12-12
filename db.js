@@ -30,7 +30,6 @@ exports.insertRecipe = function(colorHex, recipeName, recipeSource) {
 }
 
 exports.getRecipe = function(recipeID, callback) {
-	console.log(recipeID);
 	connection = mysql.createConnection({
 		host: config.development.database.host,
 		port: config.development.database.port,
@@ -47,9 +46,9 @@ exports.getRecipe = function(recipeID, callback) {
 		console.log('Connection established');
 	});
 
-	var sql = 'SELECT * FROM metadata';
+	var sql = 'SELECT * FROM ingredients where recipeID = ?';
 	var data;
-	connection.query(sql, function (err, res) {
+	connection.query(sql, recipeID, function (err, res) {
 		connection.end();
 		// console.log(res);
 		callback(err, res);

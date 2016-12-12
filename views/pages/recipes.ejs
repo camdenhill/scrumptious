@@ -39,12 +39,9 @@
 		<div class="ingredients">		<!--Ingredients list-->
 			<h4>Ingredients</h4>
 			<ul>	<!--Will eventually be node/angular for/repeat-->
-				<li><strong>2</strong> chicken breasts</li>
-				<li><strong>1/2 cup</strong> extra virgin olive oil</li>
-				<li><strong>1 pinch</strong> salt</li>
-				<li><strong>1 dash</strong> pepper</li>
-				<li><strong>1/2</strong> yellow onion</li>
-				<li><strong>1/2 cup</strong> sliced carrots</li>
+				<% ingredients.forEach(function(ingredient) { %>
+					<li class="ingredient"><strong><%= ingredient.quantity %></strong> <%= ingredient.item %></li>
+				<% }); %>
 			</ul>
 		</div>
 		<div class="chart">		<!--Gantt chart-->
@@ -53,9 +50,6 @@
 				<button>Pause</button>
 			</div>
 			<div>	<!--Timeline-->
-				<% recipes.forEach(function(recipe) { %>
-					<p class="step"><%= recipe.recipeName %></p>
-				<% }); %>
 			</div>
 		</div>
 	</div>
