@@ -25,6 +25,7 @@ module.exports = function(app)
 				var time = (date.getHours()+7) + ':' + date.getMinutes();
 				res.render('recipes', {
 					ingredients : results,
+					recipeName : results[0]['recipeName'],
 					time : time
 				});
 			}
