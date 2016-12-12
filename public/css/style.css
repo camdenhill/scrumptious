@@ -52,11 +52,11 @@ ul.ratings-and-comment {
 ul.ratings-and-comment li {
 	height: 100%;
 	float: left;
-	width: 30px;
+	width: 25px;
 }
 
 ul.ratings-and-comment li img {
-	width: 20px;
+	width: 15px;
 	height: auto;
 	padding: 0 5px;
 }
