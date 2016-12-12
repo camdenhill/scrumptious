@@ -140,8 +140,14 @@ span.underline {
 
 p#full-screen {
 	display: inline-block;
-	margin: auto;
+	text-align: right;
 	text-decoration: underline;
+}
+
+div.full-width {
+	display: block;
+	margin: auto;
+	width: 1000px;
 }
 
 p#full-screen:hover {
