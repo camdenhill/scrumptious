@@ -115,7 +115,8 @@ div.start-cooking-at {
 
 div.ingredients h4 {
 	padding-bottom: 10px;
-	border-bottom: solid 1px white;
+	border-bottom: solid 1px #222;	/* This will be one of the factors in custom colorHex css files */
+	color: #222;	/* This will be one of the factors in custom colorHex css files */
 }
 
 div.start-cooking-at h6 {
@@ -161,12 +162,11 @@ footer p {
 }
 
 li.ingredient {
-	color: white;
 	/*border-bottom: solid 1px black;*/
 	padding: 15px 0 10px;
 	font-size: .8em;
 	text-transform: capitalize;
-	color: #222;
+	color: #222;	/* This will be one of the factors in custom colorHex css files */
 }
 
 li.ingredient:last-of-type {
