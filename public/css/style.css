@@ -146,7 +146,7 @@ div.full-width {
 
 p#full-screen {
 	display: inline-block;
-	text-align: right;
+	float: right;
 	text-decoration: underline;
 }
 
