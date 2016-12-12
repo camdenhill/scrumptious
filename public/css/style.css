@@ -139,8 +139,7 @@ span.underline {
 }
 
 p#full-screen {
-	width: 1000px;
-	display: inline-block;
+	display: block;
 	margin: auto;
 	text-decoration: underline;
 }
