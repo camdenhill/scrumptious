@@ -139,7 +139,7 @@ span.underline {
 }
 
 p#full-screen {
-	display: block;
+	display: inline-block;
 	margin: auto;
 	text-decoration: underline;
 }
