@@ -24,6 +24,7 @@ module.exports = function(app)
 							ingredients : ingredients,
 							steps : steps,
 							recipeName : ingredients[0]['recipeName'],
+							source : metadata[0]['recipeSource'],
 							time : time
 						});		
 					}

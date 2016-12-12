@@ -37,7 +37,7 @@
 	<div class="full-width">
 		<p id="full-screen">Full Screen</p>
 	</div>
-	
+
 	<div class="gantt">			<!--Contains ingredients and Gantt chart-->
 		<div class="ingredients">		<!--Ingredients list-->
 			<h4>Ingredients</h4>
@@ -56,6 +56,7 @@
 				<% steps.forEach(function(step) { %>
 					<p class="step"><%= step.stepText %></p>
 				<% }); %>
+				<p><%= source %></p>
 			</div>
 		</div>
 	</div>
