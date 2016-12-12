@@ -148,6 +148,8 @@ p#full-screen {
 	display: inline-block;
 	float: right;
 	text-decoration: underline;
+	font-size: 2em;
+	font-weight: 900;
 }
 
 p#full-screen:hover {
