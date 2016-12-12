@@ -1,5 +1,5 @@
 var app = angular.module('app',[]);
 
 app.component('step', {
-	template:'<p></p>'
+	template:'<p><%= recipe.recipeName %></p>'
 });
