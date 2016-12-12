@@ -159,6 +159,9 @@ footer p {
 
 p.step {
 	font-size: .8em;
+	padding: 5px;
+	border: solid 1px black;
+	border-radius: 5px;
 }
 
 
