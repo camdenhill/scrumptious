@@ -21,7 +21,8 @@ module.exports = function(app)
 		db.getRecipe(req.params.recipeID, function (err, results) {
 			if (err) throw err;
 			else {
-				var time = Date.now();
+				var date = new Date();
+				var time = date.getTime();
 				res.render('recipes', {
 					ingredients : results,
 					time : time
