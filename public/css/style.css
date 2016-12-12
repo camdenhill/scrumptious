@@ -140,7 +140,7 @@ span.underline {
 
 p#full-screen {
 	width: 1000px;
-	display: block;
+	display: inline-block;
 	margin: auto;
 	text-decoration: underline;
 }
