@@ -162,6 +162,9 @@ p.step {
 	padding: 5px;
 	border: solid 1px black;
 	border-radius: 5px;
+	display: inline-block;
+	clear: both;
+	float: left;
 }
 
 
