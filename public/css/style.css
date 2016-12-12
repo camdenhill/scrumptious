@@ -126,7 +126,11 @@ div.start-cooking-at h6 {
 div.start-cooking-at button {
 	float: right;
 	margin-right: 10px;
-	margin-top: 5px;
+	margin-top: 7px;
+}
+
+div.start-cooking-at {
+	display: none;
 }
 
 span.underline {
