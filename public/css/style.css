@@ -138,16 +138,16 @@ span.underline {
 	text-decoration: underline;
 }
 
-p#full-screen {
-	display: inline-block;
-	text-align: right;
-	text-decoration: underline;
-}
-
 div.full-width {
 	display: block;
 	margin: auto;
 	width: 1000px;
+}
+
+p#full-screen {
+	display: inline-block;
+	text-align: right;
+	text-decoration: underline;
 }
 
 p#full-screen:hover {
