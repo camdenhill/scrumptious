@@ -166,6 +166,7 @@ li.ingredient {
 	padding: 15px 0 10px;
 	font-size: .8em;
 	text-transform: capitalize;
+	color: #222;
 }
 
 li.ingredient:last-of-type {
