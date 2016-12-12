@@ -72,7 +72,7 @@ exports.getRecipe = function(recipeID, callback) {
 		console.log('Connection established');
 	});
 
-	var sql = 'SELECT * FROM ingredients INNER JOIN metadata ON ingredients.recipeID = metadata.recipeID WHERE ingredients.recipeID = ?';
+	var sql = 'SELECT * FROM (SELECT * FROM ingredients INNER JOIN metadata ON ingredients.recipeID = metadata.recipeID) AS ingredients_metadata INNER JOIN steps ON steps.recipeID = ingredients_metadata.recipeID WHERE ingredients.recipeID = ?';
 	var data;
 	connection.query(sql, recipeID, function (err, res) {
 		connection.end();
