@@ -7,18 +7,12 @@ module.exports = function(app)
 		res.render('index.ejs')
 	});
 
-	/*
-	app.get('/recipes/:recipeId', function (req, res) {
-		res.send(req.params)
-	})
-	*/
-
 	app.get('/recipes', function (req, res) {
 		res.render('recipes.ejs')
 	})
 
 	app.get('/recipes/:recipeID', function (req, res) {
-		db.getRecipe(req.params.recipeID, function (err, results) {
+		db.getRecipe(req.params.recipeID, function (err, ingredients) {
 			if (err) throw err;
 			else {
 				db.getRecipeSteps(req.params.recipeID, function (err2, steps) {
@@ -27,11 +21,11 @@ module.exports = function(app)
 						var date = new Date();
 						var time = (date.getHours()+7) + ':' + date.getMinutes();
 						res.render('recipes', {
-							ingredients : results,
+							ingredients : ingredients,
 							steps : steps,
-							recipeName : results[0]['recipeName'],
+							recipeName : ingredients[0]['recipeName'],
 							time : time
-						});						
+						});		
 					}
 				})
 			}

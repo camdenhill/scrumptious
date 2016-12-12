@@ -55,6 +55,11 @@ exports.insertRecipeStep = function(recipeID, stepText, stepStart, stepEnd, step
 	connection.end();
 }
 
+/*
+	The way I set this up is the following:
+	getRecipe returns an inner join on ingredients and metadata;
+	will include list of ingredients as well as color, recipe name.
+*/
 exports.getRecipe = function(recipeID, callback) {
 	connection = mysql.createConnection({
 		host: config.development.database.host,
@@ -81,6 +86,10 @@ exports.getRecipe = function(recipeID, callback) {
 	});
 }
 
+/*
+	The way I set this up is the following:
+	getRecipeSteps returns json data containing steps.
+*/
 exports.getRecipeSteps = function(recipeID, callback) {
 	connection = mysql.createConnection({
 		host: config.development.database.host,
