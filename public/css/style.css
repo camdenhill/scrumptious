@@ -184,7 +184,11 @@ p.step {
 	float: left;
 }
 
-
+p.source {
+	position: absolute;
+	bottom: 0;
+	font-size: .8em;
+}
 
 
 
