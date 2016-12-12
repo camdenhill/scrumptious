@@ -55,13 +55,12 @@
 				<button>Pause</button>
 			</div>
 			<div>	<!--Timeline-->
+				<% recipes.forEach(function(recipe) { %>
+					<p><%= recipe.recipeName %></p>
+				<% }); %>
 			</div>
 		</div>
 	</div>
-
-	<% recipes.forEach(function(recipe) { %>
-		<p><%= recipe.recipeID %></p>
-	<% }); %>
 
 	<footer>
 		<p>Camden Hill 2016</p>
