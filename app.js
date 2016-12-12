@@ -38,7 +38,7 @@ module.exports = function(app)
 
 	app.post('/inserted', function(req, res) {
 		var recipeID, stepText, stepStart, stepEnd, stepDuration;
-		recipeId = req.body.recipeId;
+		recipeID = req.body.recipeID;
 		stepText = req.body.stepText;
 		stepStart = req.body.stepStart;
 		stepEnd = req.body.stepEnd;
