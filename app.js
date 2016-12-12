@@ -21,9 +21,10 @@ module.exports = function(app)
 		db.getRecipe(req.params.recipeID, function (err, results) {
 			if (err) throw err;
 			else {
-				console.log(results)
+				var time = Date.now();
 				res.render('recipes', {
-					ingredients : results
+					ingredients : results,
+					time : time
 				});
 			}
 		});
