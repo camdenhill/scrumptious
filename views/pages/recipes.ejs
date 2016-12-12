@@ -50,6 +50,9 @@
 				<button>Pause</button>
 			</div>
 			<div>	<!--Timeline-->
+				<% steps.forEach(function(step) { %>
+					<p class="step"><%= step.stepText %></p>
+				<% }); %>
 			</div>
 		</div>
 	</div>

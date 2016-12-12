@@ -80,3 +80,29 @@ exports.getRecipe = function(recipeID, callback) {
 		callback(err, res);
 	});
 }
+
+exports.getRecipeSteps = function(recipeID, callback) {
+	connection = mysql.createConnection({
+		host: config.development.database.host,
+		port: config.development.database.port,
+		user: config.development.database.username,
+		password: config.development.database.password,
+		database: config.development.database.db
+	});
+	
+	connection.connect(function(err) {
+		if (err) {
+			console.log('Error connecting to database');
+			return;
+		}
+		console.log('Connection established');
+	});
+
+	var sql = 'SELECT * FROM steps WHERE steps.recipeID = ? ORDER BY steps.stepStart';
+	var data;
+	connection.query(sql, recipeID, function (err, res) {
+		connection.end();
+		console.log(res);
+		callback(err, res);
+	});
+}
