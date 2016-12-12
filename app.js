@@ -22,7 +22,7 @@ module.exports = function(app)
 			if (err) throw err;
 			else {
 				var date = new Date();
-				var time = date.getTime();
+				var hours = date.getHours() + ':' + date.getMinutes();
 				res.render('recipes', {
 					ingredients : results,
 					time : time
