@@ -120,6 +120,7 @@ div.ingredients h4 {
 div.start-cooking-at h6 {
 	padding-top: 12px;
 	padding-left: 10px;
+	display: inline-block;
 }
 
 div.start-cooking-at button {
