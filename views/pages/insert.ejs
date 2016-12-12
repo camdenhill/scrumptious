@@ -9,14 +9,21 @@
 <body>
 	<% include ../partials/nav %>
 	<form method="post" action="/inserted">
-		<label for="colorHex">Hex Color</label>
-		<input type="text" name="colorHex">
+		<label for="recipeID">recipeID</label>
+		<input type="text" name="recipeID">
 
-		<label for="recipeName">Recipe Name</label>
-		<input type="text" name="recipeName">
+		<label for="stepText">stepText</label>
+		<input type="text" name="stepText">
 
-		<label for="recipeSource">Recipe Source</label>
-		<input type="text" name="recipeSource">
+		<label for="stepStart">stepStart</label>
+		<input type="text" name="stepStart">
+
+		<label for="stepEnd">stepEnd</label>
+		<input type="text" name="stepEnd">
+
+		<label for="stepDuration">stepDuration</label>
+		<input type="text" name="stepDuration">
+
 
 		<input type="submit" value="Submit">
 	</form>

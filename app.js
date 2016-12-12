@@ -37,12 +37,14 @@ module.exports = function(app)
 	})
 
 	app.post('/inserted', function(req, res) {
-		var colorHex, recipeName, recipeSource;
-		colorHex = req.body.colorHex;
-		recipeName = req.body.recipeName;
-		recipeSource = req.body.recipeSource;
+		var recipeID, stepText, stepStart, stepEnd, stepDuration;
+		recipeId = req.body.recipeId;
+		stepText = req.body.stepText;
+		stepStart = req.body.stepStart;
+		stepEnd = req.body.stepEnd;
+		stepDuration = req.body.stepDuration;
 
-		db.insertRecipe(colorHex, recipeName, recipeSource);
+		db.insertRecipeStep(recipeID, stepText, stepStart, stepEnd, stepDuration);
 		res.render('success.ejs')
 	})
 
