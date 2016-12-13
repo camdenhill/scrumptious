@@ -13,7 +13,7 @@ $(document).ready(function() {
 		fullScreen(gantt, ingredients, chart, chartWidth);
 
 		$('.lightbox').show();
-		$('.lightbox').delay(2000).fadeOut(1000);
+		$('.lightbox').delay(1000).fadeOut(1000);
 	});
 
 	$(document).keyup(function(e) {
