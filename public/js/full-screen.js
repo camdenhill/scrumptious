@@ -13,11 +13,13 @@ $(document).ready(function() {
 		fullScreen(gantt, ingredients, chart, chartWidth);
 
 		$('.lightbox').show();
+		$('.lightbox').animate({opacity: 0}, 3000);
 	});
 
 	$(document).keyup(function(e) {
 		if (e.keyCode == 27) {
 			shrinkScreen(gantt, ingredients, chart, chartWidth, originalGanttWidth, originalGanttHeight, originalGanttPosition, originalChartWidth);
+			$('.lightbox').hide();
 		}
 	});
 });
