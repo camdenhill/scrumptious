@@ -4,7 +4,7 @@
 	<title>Scrumptious</title>
 	<link href="/css/parent.css" rel="stylesheet" type="text/css"/>
 	<link href="/css/style.css" rel="stylesheet" type="text/css"/>
-	<link href="/css/colors/"<%= color %>".css" rel="stylesheet" type="text/css"/>
+	<link href=<%= color %> rel="stylesheet" type="text/css"/>
 	<link href="/img/Logo.png" rel="icon"/>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -60,7 +60,7 @@
 				<% steps.forEach(function(step) { %>
 					<p class="step"><%= step.stepText %></p>
 				<% }); %>
-				<p class="source"><%= color %></p>
+				<p class="source"><%= source %></p>
 			</div>
 		</div>
 	</div>

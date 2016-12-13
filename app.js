@@ -25,7 +25,7 @@ module.exports = function(app)
 							steps : steps,
 							recipeName : ingredients[0]['recipeName'],
 							source : ingredients[0]['recipeSource'],
-							color : ingredients[0]['colorHex'],
+							color : "/css/colors/"+ingredients[0]['colorHex']+".css",
 							time : time
 						});		
 					}
