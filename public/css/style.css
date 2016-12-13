@@ -128,8 +128,9 @@ div.chart {
 	padding-left: 5px;
 	box-sizing: border-box;
 	float: left;
-	background: url("/img/Thai_Broccoli_Coconut_Soup.jpg");
-	background-size: cover;
+	/*background: url("/img/Thai_Broccoli_Coconut_Soup.jpg");*/
+	/*background-size: cover;*/
+	background: white;
 }
 
 div.start-cooking-at {
@@ -210,6 +211,7 @@ p.step {
 	max-width: 300px;
 	clear: both;
 	float: left;
+	background: white;
 }
 
 p.source {
