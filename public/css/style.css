@@ -23,6 +23,24 @@ img[src="/img/Bookmark.png"] {
 	margin-right: 15px;
 }
 
+div.lightbox {
+	/*display: none;*/
+	background: rgba(0, 0, 0, .8);
+}
+
+p.lightbox-text {
+	padding: 10px;
+	background: white;
+	border-radius: 7px;
+	display: block;
+	width: 200px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -110px;
+	margin-top: -50px;
+}
+
 div.upper {
 	width: 800px;
 	height: 250px;

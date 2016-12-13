@@ -11,6 +11,8 @@ $(document).ready(function() {
 
 	$('#full-screen').click(function() {
 		fullScreen(gantt, ingredients, chart, chartWidth);
+
+		$('.lightbox').show();
 	});
 
 	$(document).keyup(function(e) {
