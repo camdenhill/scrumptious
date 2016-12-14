@@ -76,17 +76,18 @@ div.stars-and-comment {
 
 p.rating-bar {
 	background: #e27191;
-	height: 30px;
+	height: 25px;
 	width: 150px;
+	margin-top: 3px;
 	position: absolute;
-	top: 0;
-	left: 0;
+	z-index: 1;
 }
 
 img[src="/img/Stars.png"] {
-	float: left;
+	position: absolute;
 	height: 30px;
 	width: auto;
+	z-index: 2;
 }
 
 img[src="/img/Comment.png"] {
