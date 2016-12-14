@@ -69,25 +69,21 @@ img[src="/img/Pie.png"] {
 	height: auto;
 }
 
-ul.ratings-and-comment {
-	height: 60px;
-	width: 180px;
+div.stars-and-comment {
+	height: 40px;
+	width: 200px;
 }
 
-ul.ratings-and-comment li {
-	height: 100%;
+img[src="/img/Stars.png"] {
 	float: left;
-	width: 30px;
-}
-
-ul.ratings-and-comment li img {
-	width: 20px;
-	height: auto;
-	padding: 0 5px;
+	height: 30px;
+	width: auto;
 }
 
 img[src="/img/Comment.png"] {
 	margin-top: 2px;
+	float: right;
+	height: 30px;
 }
 
 div.how-many-serve-div {
