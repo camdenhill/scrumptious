@@ -8,7 +8,7 @@
 
 <body>
 	<% include ../partials/nav %>
-	<form method="post" action="/inserted">
+	<form method="post" action="/inserted-step">
 		<label for="recipeID">recipeID</label>
 		<input type="text" name="recipeID">
 
@@ -29,22 +29,15 @@
 	</form>
 
 
-	<form method="post" action="/inserted" style="margin-top:50px">
+	<form method="post" action="/inserted-ingredient" style="margin-top:50px">
 		<label for="recipeID">recipeID</label>
 		<input type="text" name="recipeID">
 
-		<label for="stepText">stepText</label>
-		<input type="text" name="stepText">
+		<label for="quantity">quantity</label>
+		<input type="text" name="quantity">
 
-		<label for="stepStart">stepStart</label>
-		<input type="text" name="stepStart">
-
-		<label for="stepEnd">stepEnd</label>
-		<input type="text" name="stepEnd">
-
-		<label for="stepDuration">stepDuration</label>
-		<input type="text" name="stepDuration">
-
+		<label for="item">item</label>
+		<input type="text" name="item">
 
 		<input type="submit" value="Submit">
 	</form>

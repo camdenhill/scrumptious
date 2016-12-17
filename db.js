@@ -55,6 +55,33 @@ exports.insertRecipeStep = function(recipeID, stepText, stepStart, stepEnd, step
 	connection.end();
 }
 
+exports.insertRecipeIngredient = function(recipeID, quantity, item) {
+	connection = mysql.createConnection({
+		host: config.development.database.host,
+		port: config.development.database.port,
+		user: config.development.database.username,
+		password: config.development.database.password,
+		database: config.development.database.db
+	});
+
+	connection.connect(function(err) {
+		if (err) {
+			console.log('Error connecting to database');
+			return;
+		}
+		console.log('Connection established');
+	});
+
+	var ingredient = { recipeID: recipeID, quantity: quantity, item: item };
+	var sql = 'INSERT INTO ingredients SET ?';
+	connection.query(sql, ingredient, function (err, res) {
+		if (err) throw err;
+		console.log('Successful');
+	});
+	connection.end();
+}
+
+
 /*
 	The way I set this up is the following:
 	getRecipe returns an inner join on ingredients and metadata;
