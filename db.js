@@ -108,7 +108,7 @@ exports.getRecipe = function(recipeID, callback) {
 	var data;
 	connection.query(sql, recipeID, function (err, res) {
 		connection.end();
-		console.log(res);
+		// console.log(res);
 		callback(err, res);
 	});
 }
@@ -138,7 +138,7 @@ exports.getRecipeSteps = function(recipeID, callback) {
 	var data;
 	connection.query(sql, recipeID, function (err, res) {
 		connection.end();
-		console.log(res);
+		console.log(step.stepStart - step.stepEnd);
 		callback(err, res);
 	});
 }
