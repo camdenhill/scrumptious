@@ -74,10 +74,10 @@ exports.insertRecipeStep = function(recipeID, stepText, stepStart, stepEnd) {
 			seconds = "";
 			break;
 		case 1:
-			seconds = "1 second ";
+			seconds = "1 second";
 			break;
 		default:
-			seconds = seconds + " seconds ";
+			seconds = seconds + " seconds";
 	}
 	stepDuration = hours + minutes + seconds;
 	var step = { recipeID: recipeID, stepText: stepText, stepStart: stepStart, stepEnd: stepEnd, stepDuration: stepDuration };
