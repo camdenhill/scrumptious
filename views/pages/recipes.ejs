@@ -60,7 +60,7 @@
 			</div>
 			<div>	<!--Timeline-->
 				<% steps.forEach(function(step) { %>
-					<p class="step" style="margin-left: <%- 100*(parseFloat(step.stepStart.split(":")[1])/42) %>px"><%= step.stepText %><br/><span class="step-duration"><%= step.stepDuration %></span></p>
+					<p class="step" style="margin-left: <%- 1000*(parseFloat(step.stepStart.split(":")[1])/42) %>px"><%= step.stepText %><br/><span class="step-duration"><%= step.stepDuration %></span></p>
 				<% }); %>
 				<p class="source"><%= source %></p>
 			</div>
