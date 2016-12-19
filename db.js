@@ -49,7 +49,37 @@ exports.insertRecipeStep = function(recipeID, stepText, stepStart, stepEnd, step
 	var hours = parseInt(stepEnd.split(":")[0]) - parseInt(stepStart.split(":")[0]);
 	var minutes = parseInt(stepEnd.split(":")[1]) - parseInt(stepStart.split(":")[1]);
 	var seconds = parseInt(stepEnd.split(":")[2]) - parseInt(stepStart.split(":")[2]);
-	console.log (hours + " hours " + minutes + " minutes" + seconds + " seconds");
+	switch (hours) {
+		case 0:
+			hours = "";
+			break;
+		case 1:
+			hours = "1 hour ";
+			break;
+		default:
+			hours = hours + " hours ";
+	}
+	switch (minutes) {
+		case 0:
+			minutes = "";
+			break;
+		case 1:
+			minutes = "1 minute ";
+			break;
+		default:
+			minutes = minutes + " minutes ";
+	}
+	switch (seconds) {
+		case 0:
+			seconds = "";
+			break;
+		case 1:
+			seconds = "1 second ";
+			break;
+		default:
+			seconds = seconds + " seconds ";
+	}
+	console.log (hours + minutes + seconds);
 	var step = { recipeID: recipeID, stepText: stepText, stepStart: stepStart, stepEnd: stepEnd, stepDuration: stepDuration };
 	var sql = 'INSERT INTO steps SET ?';
 	connection.query(sql, step, function (err, res) {
