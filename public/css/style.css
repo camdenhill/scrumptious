@@ -113,7 +113,7 @@ div.gantt {
 	width: 1000px;
 	min-height: 500px;
 	border: solid 2px black;
-	display: inline-block;
+	display: block;
 	margin: auto;
 	background: white;
 }
