@@ -50,8 +50,10 @@
 			</ul>
 		</div>
 		<div class="chart">		<!--Gantt chart-->
-			<div style="position:absolute; height:100%; width:100px; border-right:solid 1px #c0c0c0; background:white; box-sizing:border-box"><p>0:00</p></div>
-			<div style="position:absolute; height:100%; width:100px; border-right:solid 1px #c0c0c0; margin-left: 100px; background:white; box-sizing:border-box"><p>0:10</p></div>
+			<div class="intervals" id="intervals">
+				<div class="interval"></div>
+				<div class="interval"></div>
+			</div>
 			<div class="start-cooking-at">	<!--Starting cooking at...-->
 				<h6>Start cooking at <span class="underline"><%= time %></span></h6>
 				<button>Pause</button>
