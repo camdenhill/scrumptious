@@ -114,6 +114,7 @@ div.gantt {
 	display: block;
 	margin: auto;
 	background: white;
+	overflow: scroll;
 }
 
 div.ingredients {
@@ -124,6 +125,7 @@ div.ingredients {
 	box-sizing: border-box;
 	float: left;
 	padding: 20px;
+	overflow: scroll;
 }
 
 div.chart {
@@ -136,6 +138,7 @@ div.chart {
 	/*background: url("/img/Thai_Broccoli_Coconut_Soup.jpg");*/
 	/*background-size: cover;*/
 	background: white;
+	overflow: scroll;
 }
 
 div.start-cooking-at {
@@ -239,7 +242,6 @@ p.step {
 p.source {
 	position: absolute;
 	bottom: 0;
-	margin-bottom: -10px;
 	font-size: .8em;
 	font-style: italic;
 	color: #bbb;
