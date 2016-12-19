@@ -29,7 +29,7 @@ module.exports = function(app)
 							ingredients : ingredients,
 							steps : steps,
 							// marginLeft : 'style="margin-left: ' + marginLeft + 'px"',
-							marginLeft : '2000px',
+							marginLeft : 2000,
 							recipeName : ingredients[0]['recipeName'],
 							source : ingredients[0]['recipeSource'],
 							// color : "/css/colors/"+ingredients[0]['colorHex']+".css",
