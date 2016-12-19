@@ -114,10 +114,7 @@ div.gantt {
 	min-height: 500px;
 	border: solid 2px black;
 	display: inline-block;
-	position: absolute;
-	left: 50%;
-	margin-left: -500px;
-	/*margin: auto;*/
+	margin: auto;
 	background: white;
 }
 
