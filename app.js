@@ -19,7 +19,7 @@ module.exports = function(app)
 					if (err2) throw err2;
 					else {
 						var date = new Date();
-						for (var i=0; i<steps.length(); i++) {
+						for (var i=0; i<steps.length; i++) {
 							console.log(steps[i]['stepStart']);
 						}
 						// var marginLeft = parseInt(ingredients[0]['recipeDuration'].split(":")[1]);
