@@ -22,14 +22,11 @@ module.exports = function(app)
 						for (var i=0; i<steps.length; i++) {
 							console.log(steps[i]['stepStart']);
 						}
-						// var marginLeft = parseInt(ingredients[0]['recipeDuration'].split(":")[1]);
-						var marginLeft = '150';
 						var time = (date.getHours()+7) + ':' + date.getMinutes();
 						res.render('recipes', {
 							ingredients : ingredients,
 							steps : steps,
 							// marginLeft : 'style="margin-left: ' + marginLeft + 'px"',
-							marginLeft : 2000,
 							recipeName : ingredients[0]['recipeName'],
 							source : ingredients[0]['recipeSource'],
 							// color : "/css/colors/"+ingredients[0]['colorHex']+".css",
