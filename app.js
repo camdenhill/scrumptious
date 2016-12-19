@@ -21,7 +21,7 @@ module.exports = function(app)
 						var date = new Date();
 						console.log(steps[0]['stepEnd']);
 						// var marginLeft = parseInt(ingredients[0]['recipeDuration'].split(":")[1]);
-						var marginLeft = '150px';
+						var marginLeft = '150';
 						var time = (date.getHours()+7) + ':' + date.getMinutes();
 						res.render('recipes', {
 							ingredients : ingredients,
