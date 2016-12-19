@@ -80,14 +80,12 @@ p.rating-bar {
 	width: 149px;	/* represents 4.5 starts; 29px per star */
 	margin-top: 3px;
 	position: absolute;
-	z-index: 1;
 }
 
 img[src="/img/Stars.png"] {
 	position: absolute;
 	height: 30px;
 	width: auto;
-	z-index: 2;
 }
 
 img[src="/img/Comment.png"] {
