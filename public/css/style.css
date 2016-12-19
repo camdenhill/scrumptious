@@ -132,6 +132,7 @@ div.chart {
 	height: 100%;
 	box-sizing: border-box;
 	float: left;
+	padding-left: 5px;
 	/*background: url("/img/Thai_Broccoli_Coconut_Soup.jpg");*/
 	/*background-size: cover;*/
 	background: white;
