@@ -46,9 +46,9 @@ exports.insertRecipeStep = function(recipeID, stepText, stepStart, stepEnd, step
 		console.log('Connection established');
 	});
 
-	var hours = parseInt(res[0]['stepEnd'].split(":")[0]) - parseInt(res[0]['stepStart'].split(":")[0]);
-	var minutes = parseInt(res[0]['stepEnd'].split(":")[1]) - parseInt(res[0]['stepStart'].split(":")[1]);
-	var seconds = parseInt(res[0]['stepEnd'].split(":")[2]) - parseInt(res[0]['stepStart'].split(":")[2]);
+	var hours = parseInt(stepEnd.split(":")[0]) - parseInt(stepStart.split(":")[0]);
+	var minutes = parseInt(stepEnd.split(":")[1]) - parseInt(stepStart.split(":")[1]);
+	var seconds = parseInt(stepEnd.split(":")[2]) - parseInt(stepStart.split(":")[2]);
 	console.log (hours + " hours " + minutes + " minutes" + seconds + " seconds");
 	var step = { recipeID: recipeID, stepText: stepText, stepStart: stepStart, stepEnd: stepEnd, stepDuration: stepDuration };
 	var sql = 'INSERT INTO steps SET ?';
