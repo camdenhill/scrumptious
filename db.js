@@ -29,7 +29,7 @@ exports.insertRecipeMetadata = function(colorHex, recipeName, recipeSource) {
 	connection.end();
 }
 
-exports.insertRecipeStep = function(recipeID, stepText, stepStart, stepEnd, stepDuration) {
+exports.insertRecipeStep = function(recipeID, stepText, stepStart, stepEnd) {
 	connection = mysql.createConnection({
 		host: config.development.database.host,
 		port: config.development.database.port,
@@ -79,7 +79,7 @@ exports.insertRecipeStep = function(recipeID, stepText, stepStart, stepEnd, step
 		default:
 			seconds = seconds + " seconds ";
 	}
-	console.log (hours + minutes + seconds);
+	stepDuration = hours + minutes + seconds;
 	var step = { recipeID: recipeID, stepText: stepText, stepStart: stepStart, stepEnd: stepEnd, stepDuration: stepDuration };
 	var sql = 'INSERT INTO steps SET ?';
 	connection.query(sql, step, function (err, res) {
