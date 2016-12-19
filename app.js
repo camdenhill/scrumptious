@@ -23,7 +23,7 @@ module.exports = function(app)
 						res.render('recipes', {
 							ingredients : ingredients,
 							steps : steps,
-							marginLeft : 'style="margin-left: 100px"',
+							marginLeft : 'style=\"margin-left: 100px\"',
 							recipeName : ingredients[0]['recipeName'],
 							source : ingredients[0]['recipeSource'],
 							// color : "/css/colors/"+ingredients[0]['colorHex']+".css",
