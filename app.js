@@ -19,11 +19,14 @@ module.exports = function(app)
 					if (err2) throw err2;
 					else {
 						var date = new Date();
+						console.log(steps[0]['stepEnd']);
+						// var marginLeft = parseInt(ingredients[0]['recipeDuration'].split(":")[1]);
+						var marginLeft = '150px';
 						var time = (date.getHours()+7) + ':' + date.getMinutes();
 						res.render('recipes', {
 							ingredients : ingredients,
 							steps : steps,
-							marginLeft : 'style="margin-left: 100px"',
+							marginLeft : 'style="margin-left: ' + marginLeft + 'px"',
 							recipeName : ingredients[0]['recipeName'],
 							source : ingredients[0]['recipeSource'],
 							// color : "/css/colors/"+ingredients[0]['colorHex']+".css",
