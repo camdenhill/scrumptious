@@ -111,9 +111,9 @@ select.how-many-serve-select {
 
 div.gantt {
 	width: 1000px;
-	height: 500px;
+	min-height: 500px;
 	border: solid 2px black;
-	display: block;
+	display: inline-block;
 	margin: auto;
 	background: white;
 }
