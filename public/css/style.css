@@ -130,7 +130,6 @@ div.chart {
 	width: 760px;
 	overflow-x: scroll;
 	height: 100%;
-	padding-left: 5px;
 	box-sizing: border-box;
 	float: left;
 	/*background: url("/img/Thai_Broccoli_Coconut_Soup.jpg");*/
@@ -148,15 +147,13 @@ div.start-cooking-at {
 
 div.intervals {
 	position: absolute;
-	width: 100%;
-	height: 100%;
 	margin: 0;
 	background: purple;
 }
 
 div.interval {
-	 height: 100%;
 	 width: 100px;
+	 height: inherit;
 	 border-right: solid 1px #c0c0c0;
 	 margin-left: 0;
 	 background: white;
