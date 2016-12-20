@@ -154,6 +154,7 @@ exports.getRecipe = function(recipeID, callback) {
 */
 exports.getRecipes = function(callback) {
 	var showcaseList = showcase.gallery;
+	console.log(showcaseList);
 	var rotd = showcase.rotd;
 	connection = mysql.createConnection({
 		host: config.development.database.host,
@@ -171,10 +172,9 @@ exports.getRecipes = function(callback) {
 		console.log('Connection established');
 	});
 
-	var sql = 'SELECT * FROM metadata WHERE recipeID in (1, 2, 3, 7)';
+	var sql = 'SELECT * FROM metadata WHERE recipeID in ?';
 	var data;
-	connection.query(sql, function (err, res) {
-	// connection.query(sql, showcaseList, function (err, res) {
+	connection.query(sql, showcaseList, function (err, res) {
 		connection.end();
 		console.log(res);
 		callback(err, res);
