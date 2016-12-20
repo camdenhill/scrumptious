@@ -274,7 +274,13 @@ div.gallery {
 	padding: 10px;
 }
 
-
+img.expand {
+	width: 40px;
+	height: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
 
 
 
