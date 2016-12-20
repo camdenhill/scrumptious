@@ -6,8 +6,8 @@ module.exports = function(app)
 	app.get('/', function (req, res) {
 		res.render('index.ejs', {
 			gallery : ['3','7']
-		});
-	});
+		})
+	})
 
 	app.get('/recipes', function (req, res) {
 		res.render('recipes.ejs')
