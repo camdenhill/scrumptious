@@ -1,5 +1,6 @@
 var mysql = require('mysql');
 var config = require('./config.js');
+var showcase = require('./showcase.js')
 
 var connection;
 
@@ -146,6 +147,39 @@ exports.getRecipe = function(recipeID, callback) {
 		callback(err, res);
 	});
 }
+
+
+/*
+	Get recipes is to get all of the items in the showcase
+*/
+exports.getRecipes = function(callback) {
+	var showcase = showcase.gallery;
+	var rotd = showcase.rotd;
+	connection = mysql.createConnection({
+		host: config.development.database.host,
+		port: config.development.database.port,
+		user: config.development.database.username,
+		password: config.development.database.password,
+		database: config.development.database.db
+	});
+	
+	connection.connect(function(err) {
+		if (err) {
+			console.log('Error connecting to database');
+			return;
+		}
+		console.log('Connection established');
+	});
+
+	var sql = 'SELECT * FROM metadata WHERE recipeID in ' + showcase;
+	var data;
+	connection.query(sql, recipeID, function (err, res) {
+		connection.end();
+		console.log(res);
+		callback(err, res);
+	});
+}
+
 
 /*
 	The way I set this up is the following:
