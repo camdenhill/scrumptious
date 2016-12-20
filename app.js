@@ -7,7 +7,7 @@ module.exports = function(app)
 		var rotd = showcase.rotd;
 		showcase.getRecipes(function (err, recipes) {
 			res.render('index.ejs', {
-				recipes : recipes
+				recipes : recipes,
 				rotd : rotd
 			})
 		})
