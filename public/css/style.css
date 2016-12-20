@@ -259,7 +259,7 @@ div.written-recipe {
 	margin: auto;
 	margin-top: 50px;
 	padding-left: 20px;
-	display: none;
+	display: block;
 }
 
 div.written-recipe p {
@@ -271,8 +271,7 @@ div.gallery {
 }
 
 .gallery-image {
-	width: 300px;
-	height: auto;
+	height: 200px;
 	padding: 10px;
 }
 
