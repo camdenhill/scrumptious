@@ -265,6 +265,8 @@ div.written-recipe p {
 
 div.gallery {
 	width: 1000px;
+	display: block;
+	margin: auto;
 }
 
 .gallery-image {
