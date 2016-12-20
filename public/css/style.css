@@ -266,9 +266,15 @@ div.written-recipe p {
 	padding: 20px 0;
 }
 
+div.gallery {
+	width: 1000px;
+}
 
-
-
+.gallery-image {
+	width: 300px;
+	height: auto;
+	padding: 10px;
+}
 
 
 
