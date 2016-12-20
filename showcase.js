@@ -1,6 +1,6 @@
 var showcase = {
 	rotd: '1',
-	getRecipes: function {
+	getRecipes: function() {
 		return ['2', '3', '7']	
 	}
 };
