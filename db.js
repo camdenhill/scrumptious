@@ -172,9 +172,9 @@ exports.getRecipes = function(callback) {
 		console.log('Connection established');
 	});
 
-	var sql = 'SELECT * FROM metadata WHERE recipeID in ?';
+	var sql = 'SELECT * FROM metadata WHERE recipeID IN ' + showcaseList;
 	var data;
-	connection.query(sql, showcaseList, function (err, res) {
+	connection.query(sql, function (err, res) {
 		connection.end();
 		console.log(res);
 		callback(err, res);
