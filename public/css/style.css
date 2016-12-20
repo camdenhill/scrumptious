@@ -259,6 +259,7 @@ div.written-recipe {
 	margin: auto;
 	margin-top: 50px;
 	padding-left: 20px;
+	display: none;
 }
 
 div.written-recipe p {
