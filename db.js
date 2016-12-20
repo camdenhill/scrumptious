@@ -153,7 +153,7 @@ exports.getRecipe = function(recipeID, callback) {
 	Get recipes is to get all of the items in the showcase
 */
 exports.getRecipes = function(callback) {
-	var showcase = showcase.gallery;
+	var showcaseList = showcase.gallery;
 	var rotd = showcase.rotd;
 	connection = mysql.createConnection({
 		host: config.development.database.host,
@@ -171,7 +171,7 @@ exports.getRecipes = function(callback) {
 		console.log('Connection established');
 	});
 
-	var sql = 'SELECT * FROM metadata WHERE recipeID in ' + showcase;
+	var sql = 'SELECT * FROM metadata WHERE recipeID in ' + showcaseList;
 	var data;
 	connection.query(sql, recipeID, function (err, res) {
 		connection.end();
