@@ -255,11 +255,8 @@ span.step-duration {
 
 div.written-recipe {
 	width: 500px;
-	display: block;
-	margin: auto;
 	margin-top: 50px;
 	padding-left: 20px;
-	display: block;
 }
 
 div.written-recipe p {
