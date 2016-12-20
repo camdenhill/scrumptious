@@ -13,6 +13,7 @@ $(document).ready(function() {
 		fullScreen(gantt, ingredients, chart, chartWidth);
 
 		$('.lightbox').show();
+		$(this).hide();
 		$('.lightbox').delay(1000).fadeOut(1000);
 	});
 
@@ -20,6 +21,7 @@ $(document).ready(function() {
 		if (e.keyCode == 27) {
 			shrinkScreen(gantt, ingredients, chart, chartWidth, originalGanttWidth, originalGanttHeight, originalGanttPosition, originalChartWidth);
 			$('.lightbox').hide();
+			$('#expand').show();
 		}
 	});
 });
