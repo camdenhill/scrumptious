@@ -9,7 +9,7 @@ $(document).ready(function() {
 	ingredients = $('.ingredients');
 	chart = $('.chart');
 
-	$('#full-screen').click(function() {
+	$('#expand').click(function() {
 		fullScreen(gantt, ingredients, chart, chartWidth);
 
 		$('.lightbox').show();
