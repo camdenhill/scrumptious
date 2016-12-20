@@ -1,10 +1,13 @@
 var db = require('./db.js');
+var showcase = require('./showcase.js')
 
 module.exports = function(app)
 {
 	app.route('/')
 	.get(function (req, res) {
-		res.render('index.ejs')
+		res.render('index.ejs', {
+			gallery: showcase.gallery
+		});
 	});
 
 	app.get('/recipes', function (req, res) {
