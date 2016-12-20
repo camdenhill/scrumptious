@@ -1,5 +1,5 @@
 var showcase = {
-	rotd: '7',
-	gallery: ['3','7']
+	rotd: '1',
+	gallery: ['2', '3','7']
 };
 module.exports = showcase;
