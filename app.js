@@ -3,10 +3,9 @@ var showcase = require('./showcase.js')
 
 module.exports = function(app)
 {
-	app.route('/')
-	.get(function (req, res) {
+	app.get('/', function (req, res) {
 		res.render('index.ejs', {
-			gallery : '3'
+			gallery : ['3','7']
 		});
 	});
 

@@ -11,7 +11,9 @@
 	<div class="wrapper">	<!-- set width=1000px -->
 		<h1>The New Cookbook</h1>
 		<div class="recipe-gallery">
-			<%= gallery %>
+			<% gallery.forEach(function(item, index) { %>
+				<p><%= item %></p>
+			<% }); %>
 		</div>
 	</div>
 </body>
