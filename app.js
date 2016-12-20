@@ -4,10 +4,12 @@ var showcase = require('./showcase.js')
 module.exports = function(app)
 {
 	app.get('/', function (req, res) {
-		var gallery = showcase.gallery;
-
-		res.render('index.ejs', {
-			gallery : gallery
+		var rotd = showcase.rotd;
+		showcase.getRecipes(function (err, recipes) {
+			res.render('index.ejs', {
+				recipes : recipes
+				rotd : rotd
+			})
 		})
 	})
 
