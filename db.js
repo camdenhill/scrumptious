@@ -150,11 +150,10 @@ exports.getRecipe = function(recipeID, callback) {
 
 
 /*
-	Get recipes is to get all of the items in the showcase
+	Get all recipe metadata for recipes in gallery (subset of recipes to be displayed on index)
 */
 exports.getGallery = function(callback) {
 	var galleryList = showcase.gallery;
-	var featured = showcase.featured;
 
 	connection = mysql.createConnection({
 		host: config.development.database.host,
@@ -173,6 +172,38 @@ exports.getGallery = function(callback) {
 	});
 
 	var sql = 'SELECT * FROM metadata WHERE recipeID IN ' + galleryList;
+	var data;
+	connection.query(sql, function (err, res) {
+		connection.end();
+		console.log(res);
+		callback(err, res);
+	});
+}
+
+
+/*
+	Get featured recipe
+*/
+exports.getFeatured = function(callback) {
+	var featured = showcase.featured;
+
+	connection = mysql.createConnection({
+		host: config.development.database.host,
+		port: config.development.database.port,
+		user: config.development.database.username,
+		password: config.development.database.password,
+		database: config.development.database.db
+	});
+	
+	connection.connect(function(err) {
+		if (err) {
+			console.log('Error connecting to database');
+			return;
+		}
+		console.log('Connection established');
+	});
+
+	var sql = 'SELECT * FROM metadata WHERE recipeID IN ' + featured;
 	var data;
 	connection.query(sql, function (err, res) {
 		connection.end();

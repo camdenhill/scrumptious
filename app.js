@@ -3,10 +3,14 @@ var db = require('./db.js');
 module.exports = function(app)
 {
 	app.get('/', function (req, res) {
-		db.getGallery(function (err, recipes) {
-			if (err) throw err;
-			res.render('index.ejs', {
-				recipes : recipes,
+		db.getGallery(function (err1, recipes) {
+			if (err1) throw err1;
+			db.getFeatured(function (err2, featured) {
+				if (err2) throw err2;
+				res.render('index.ejs', {
+					recipes : recipes,
+					featured : featured
+				})
 			})
 		})
 	})
@@ -16,8 +20,8 @@ module.exports = function(app)
 	})
 
 	app.get('/recipes/:recipeID', function (req, res) {
-		db.getRecipe(req.params.recipeID, function (err, ingredients) {
-			if (err) throw err;
+		db.getRecipe(req.params.recipeID, function (err1, ingredients) {
+			if (err1) throw err1;
 			else {
 				db.getRecipeSteps(req.params.recipeID, function (err2, steps) {
 					if (err2) throw err2;
