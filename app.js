@@ -3,12 +3,14 @@ var db = require('./db.js');
 module.exports = function(app)
 {
 	app.get('/', function (req, res) {
-		db.getRecipes(function (err, recipes) {
+		var recipes1;
+		db.getGallery(function (err, recipes) {
 			if (err) throw err;
-			res.render('index.ejs', {
-				recipes : recipes,
-			})
+			recipes1 = recipes;
 		})
+		res.render('index.ejs', {
+			recipes : recipes1,
+		})	
 	})
 
 	app.get('/recipes', function (req, res) {
