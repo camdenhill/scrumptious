@@ -11,16 +11,18 @@
 	<div class="wrapper">	<!-- set width=1000px -->
 		<h1>The New Cookbook</h1>
 		<div class="recipe-gallery">
-			<div class="featured"></div>
+			<div class="featured">
+				<% featured.forEach(function(feature) { %>
+					<%= feature.recipeName %>
+					<img src=<%= feature.recipeImg %>/>
+				<% }); %>
+			</div>
 			<div class="gallery">
 				<% recipes.forEach(function(recipe) { %>
 					<%= recipe.recipeName %>
 				<% }); %>
 			</div>
-				<% featured.forEach(function(feature) { %>
-					<%= feature.recipeName %>
-				<% }); %>
-			</div>
+		</div>
 	</div>
 </body>
 </html>
