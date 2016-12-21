@@ -203,7 +203,7 @@ exports.getFeatured = function(callback) {
 		console.log('Connection established');
 	});
 
-	var sql = 'SELECT * FROM metadata WHERE recipeID IN ' + featured;
+	var sql = 'SELECT * FROM metadata WHERE recipeID IN (' + featured + ')';
 	var data;
 	connection.query(sql, function (err, res) {
 		connection.end();
