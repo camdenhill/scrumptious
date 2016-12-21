@@ -17,8 +17,10 @@
 					<%= recipe.recipeName %>
 				<% }); %>
 			</div>
-			<%= featured.recipeName %>
-		</div>
+				<% featured.forEach(function(feature) { %>
+					<%= feature.recipeName %>
+				<% }); %>
+			</div>
 	</div>
 </body>
 </html>
