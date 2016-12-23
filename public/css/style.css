@@ -1,4 +1,4 @@
-img[src="/img/LogoFill.png"] {
+img[src="/img/LogoFill.png"], img[src="/img/Logo.png"] {
 	width: auto;
 	height: 100%;
 	border-right: solid 1px black;
