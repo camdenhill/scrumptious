@@ -52,7 +52,7 @@ div.upper {
 	width: 800px;
 	height: 250px;
 	display: block;
-	margin: -25px auto;
+	margin: 50px auto -50px;
 }
 
 div.upper * {
@@ -75,7 +75,7 @@ div.stars-and-comment {
 }
 
 p.rating-bar {
-	background: #c0c0c0;
+	background: #ffffff;
 	/*background: #e27191;*/
 	height: 25px;
 	width: 149px;	/* represents 4.5 starts; 29px per star */
@@ -122,7 +122,7 @@ div.gantt {
 div.ingredients {
 	width: 240px;
 	height: 100%;
-	background: #c0c0c0;
+	background: #ffffff;
 	/*background: #e27191;*/
 	border-right: solid 2px black;
 	box-sizing: border-box;
