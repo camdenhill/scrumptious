@@ -75,7 +75,8 @@ div.stars-and-comment {
 }
 
 p.rating-bar {
-	background: #e27191;
+	background: #c0c0c0;
+	/*background: #e27191;*/
 	height: 25px;
 	width: 149px;	/* represents 4.5 starts; 29px per star */
 	margin-top: 3px;
@@ -121,7 +122,8 @@ div.gantt {
 div.ingredients {
 	width: 240px;
 	height: 100%;
-	background: #e27191;
+	background: #c0c0c0;
+	/*background: #e27191;*/
 	border-right: solid 2px black;
 	box-sizing: border-box;
 	float: left;
