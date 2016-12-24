@@ -65,6 +65,7 @@ button {
 	border-radius: 0;
 	color: black;
 	font-weight: 400;
+	font-size: .8em;
 }
 
 button:hover {
