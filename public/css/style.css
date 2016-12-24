@@ -203,7 +203,8 @@ div.full-width {
 }
 
 div.full-width button {
-	margin-right: 10px;
+	margin-left: 10px;
+	float: right;
 }
 
 p#full-screen {

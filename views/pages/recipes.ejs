@@ -41,8 +41,8 @@
 		<button id="traditional">Read in traditional format</button>
 	</div>
 
-	<div class="gantt">			<!--Contains ingredients and Gantt chart-->
-		<div class="ingredients">		<!--Ingredients list-->
+	<div class="gantt" id="gantt">			<!--Contains ingredients and Gantt chart-->
+		<div class="ingredients" id="ingredients">		<!--Ingredients list-->
 			<h4>Ingredients</h4>
 			<ul>	<!--Will eventually be node/angular for/repeat-->
 				<% ingredients.forEach(function(ingredient) { %>
@@ -50,7 +50,7 @@
 				<% }); %>
 			</ul>
 		</div>
-		<div class="chart">		<!--Gantt chart-->
+		<div class="chart" id="chart">		<!--Gantt chart-->
 				<img class="expand" id="expand" src="/img/Expand.png"/>
 <!-- 			<div class="intervals" id="intervals">
 				<div class="interval"></div>

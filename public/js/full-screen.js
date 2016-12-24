@@ -1,13 +1,18 @@
 $(document).ready(function() {
 	var gantt, ingredients, chart, chartWidth;
-	var originalGanttWidth = '1000px';
-	var originalGanttHeight = '500px';
-	var originalGanttPosition = 'relative';
-	var originalChartWidth = '760px';
+	var originalGanttWidth;
+	var originalGanttHeight;
+	var originalGanttPosition;
+	var originalChartWidth;
 
 	gantt = $('.gantt');
 	ingredients = $('.ingredients');
 	chart = $('.chart');
+
+	originalGanttWidth = gantt.width();
+	originalGanttHeight = gantt.height();
+	originalGanttPosition = gantt.css('position');
+	originalChartWidth = chart.width();
 
 	$('#expand').click(function() {
 		fullScreen(gantt, ingredients, chart, chartWidth);
