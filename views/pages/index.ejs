@@ -19,7 +19,7 @@
 			</div>
 			<div class="gallery">
 				<% recipes.forEach(function(recipe) { %>
-					<p><%= recipe.recipeName %></p>
+					<a href="/recipes/<%-recipe.recipeID%>"><p><%= recipe.recipeName %></p></a>
 				<% }); %>
 			</div>
 		</div>
