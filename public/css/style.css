@@ -200,6 +200,10 @@ div.full-width {
 	width: 1000px;
 }
 
+div.full-width button {
+	margin: 5px;
+}
+
 p#full-screen {
 	display: inline-block;
 	text-decoration: underline;

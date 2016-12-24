@@ -60,6 +60,7 @@ select {
 button {
 	padding: 5px 10px;
 	background: #e27191;
+	background: #ffffff;
 	border: solid 1px black;
 	border-radius: 0;
 	color: white;
