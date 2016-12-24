@@ -198,6 +198,7 @@ span.underline {
 div.full-width {
 	display: block;
 	margin: auto;
+	margin-bottom: 10px;
 	width: 1000px;
 }
 
