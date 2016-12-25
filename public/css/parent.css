@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Baskerville Normal';
     font-weight: 400;
-    src: url('fonts/Baskerville.ttc');
+    src: url('/fonts/Baskerville.ttc');
 }
 
 * {
