@@ -11,8 +11,7 @@ img[src="/img/LogoFill.png"], img[src="/img/Logo.png"] {
 }
 
 div.wrapper {
-	/*width: 1000px;*/
-	width: 100%;
+	width: 1000px;
 	display: block;
 	margin: auto;
 }
