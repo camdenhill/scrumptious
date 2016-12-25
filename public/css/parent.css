@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Baskerville Normal';
+    font-weight: 400;
+    src: url(fonts/Baskerville.ttc);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -19,6 +25,7 @@ nav {
 }
 
 h1 {
+	font-family: 'Baskerville Normal', Helvetica, Arial, sans-serif
 	text-align: center;
 	font-weight: 100;
 	font-size: 1.8em;

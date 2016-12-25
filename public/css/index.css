@@ -13,6 +13,7 @@ div.wrapper {
 div.featured {
 	width: 100%;
 	height: 400px;
+	overflow: hidden;
 }
 
 div.featured img {
