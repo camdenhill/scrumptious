@@ -23,6 +23,10 @@ nav {
 	background: white;
 }
 
+a {
+	color: black;
+}
+
 h1 {
 	font-family: 'Baskerville', Helvetica, Arial, sans-serif;
 	text-align: center;
