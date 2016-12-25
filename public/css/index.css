@@ -2,6 +2,14 @@ body {
 	background: white;
 }
 
+nav {
+	border: none;
+}
+
+img[src="/img/LogoFill.png"], img[src="/img/Logo.png"] {
+	border: none;
+}
+
 div.wrapper {
 	/*width: 1000px;*/
 	width: 100%;

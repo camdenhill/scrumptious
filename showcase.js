@@ -1,6 +1,6 @@
 var showcase = {
-	featured : '3',
-	gallery : '(1, 2, 7)'
+	featured : '7',
+	gallery : '(1, 2, 3)'
 };
 
 module.exports = showcase;
