@@ -234,7 +234,7 @@ exports.getRecipeSteps = function(recipeID, callback) {
 		console.log('Connection established');
 	});
 
-	var sql = 'SELECT * FROM steps WHERE steps.recipeID = ? ORDER BY steps.stepStart';
+	var sql = 'SELECT * FROM steps WHERE steps.recipeID = ? ORDER BY steps.stepStart, steps.stepEnd';
 	var data;
 	connection.query(sql, recipeID, function (err, res) {
 		connection.end();
