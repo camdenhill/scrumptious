@@ -296,17 +296,3 @@ img.expand:hover {
 	cursor: pointer;
 }
 
-div.wrapper {
-	width: 100%;
-}
-
-div.featured {
-	width: 100%;
-	height: 400px;
-}
-
-div.featured img {
-	width: 100%;
-	height: auto;
-}
-
