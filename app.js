@@ -33,6 +33,7 @@ module.exports = function(app)
 							console.log(steps[i]['stepStart']);
 						}
 						var time = (date.getHours()+7) + ':' + date.getMinutes();
+						console.log(ingredients[0]);
 						res.render('recipes', {
 							ingredients : ingredients,
 							steps : steps,
