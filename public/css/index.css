@@ -33,4 +33,10 @@ div.featured h5, div.featured p {
 	display: inline-block;
 	max-width: calc(100% / 3);
 	float: left;
+	clear: left;
+}
+
+div.featured h5 {
+	padding: 0;
+	padding-bottom: 20px;
 }
