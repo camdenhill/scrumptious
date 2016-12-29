@@ -17,10 +17,6 @@ module.exports = function(app)
 		})
 	})
 
-	app.get('/recipes', function (req, res) {
-		res.render('recipes.ejs')
-	})
-
 	app.get('/recipes/:recipeID', function (req, res) {
 		db.getRecipe(req.params.recipeID, function (err1, ingredients) {
 			if (err1) throw err1;
