@@ -24,6 +24,6 @@ div.featured {
 }
 
 div.featured img {
-	width: 100%;
-	height: auto;
+	width: calc((200% / 3) - 20px);
+	float: right;
 }

@@ -312,8 +312,4 @@ img.expand:hover {
 	cursor: pointer;
 }
 
-div.featured {
-	width: calc((200% / 3) - 40px);
-	float: right;
-}
 
