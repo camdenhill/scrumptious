@@ -17,10 +17,6 @@ module.exports = function(app)
 		})
 	})
 
-	// app.get('/recipes', function (req, res) {
-	// 	res.status(404).render('404.ejs');
-	// })
-
 	app.get('/recipes/:recipeID', function (req, res) {
 		db.getRecipe(req.params.recipeID, function (err1, ingredients) {
 			if (err1) throw err1;
@@ -33,7 +29,6 @@ module.exports = function(app)
 							console.log(steps[i]['stepStart']);
 						}
 						var time = (date.getHours()+7) + ':' + date.getMinutes();
-						console.log(ingredients[0]);
 						res.render('recipes', {
 							ingredients : ingredients,
 							steps : steps,
@@ -41,7 +36,6 @@ module.exports = function(app)
 							recipeName : ingredients[0]['recipeName'],
 							source : ingredients[0]['recipeSource'],
 							// color : "/css/colors/"+ingredients[0]['colorHex']+".css",
-							image : ingredients[0]['recipeImg'],
 							time : time
 						});		
 					}
