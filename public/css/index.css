@@ -28,3 +28,9 @@ div.featured img {
 	width: calc((200% / 3) - 20px);
 	float: right;
 }
+
+h5 {
+	display: inline-block;
+	max-width: calc(100% / 3);
+	float: left;
+}
