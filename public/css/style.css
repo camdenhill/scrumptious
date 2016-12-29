@@ -274,10 +274,10 @@ div.written-recipe p {
 
 div.gallery {
 	width: 1000px;
-	height: 420px;
 	display: inline-block;
 	margin: auto;
 	margin-top: 30px;
+	padding-bottom: 30px;
 }
 
 div.gallery-item {
