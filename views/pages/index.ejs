@@ -21,6 +21,7 @@
 			<div class="gallery">
 				<% recipes.forEach(function(recipe) { %>
 					<div class="gallery-item">
+						<img src="<%-recipe.image%>">
 						<a href="/recipes/<%-recipe.recipeID%>"><h5><%= recipe.recipeName %></h5></a>
 						<p><%= recipe.description %></p>
 					</div>

@@ -276,6 +276,7 @@ div.gallery {
 	width: 1000px;
 	display: block;
 	margin: auto;
+	margin-top: 50px;
 }
 
 div.gallery-item {

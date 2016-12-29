@@ -40,6 +40,7 @@ module.exports = function(app)
 							recipeName : ingredients[0]['recipeName'],
 							source : ingredients[0]['recipeSource'],
 							// color : "/css/colors/"+ingredients[0]['colorHex']+".css",
+							image : ingredients[0]['recipeImg'],
 							time : time
 						});		
 					}
