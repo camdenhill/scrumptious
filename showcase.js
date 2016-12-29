@@ -1,3 +1,5 @@
+'use strict';
+
 var showcase = {
 	featured : '7',
 	gallery : '(1, 2, 3)'
