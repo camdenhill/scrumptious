@@ -274,7 +274,7 @@ div.written-recipe p {
 
 div.gallery {
 	width: 1000px;
-	display: block;
+	display: inline-block;
 	margin: auto;
 	margin-top: 50px;
 }
@@ -310,5 +310,10 @@ img.expand {
 
 img.expand:hover {
 	cursor: pointer;
+}
+
+div.featured {
+	width: calc((200% / 3) - 40px);
+	float: right;
 }
 
