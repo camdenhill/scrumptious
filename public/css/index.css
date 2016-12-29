@@ -31,9 +31,11 @@ div.featured img {
 
 div.featured h5, div.featured p {
 	display: inline-block;
+}
+
+div.featured div {
 	max-width: calc(100% / 3);
 	float: left;
-	clear: left;
 }
 
 div.featured h5 {
