@@ -15,7 +15,7 @@
 			<div class="featured">
 				<% featured.forEach(function(feature) { %>
 					<h5><%= feature.recipeName %></h5>
-					<p><%= recipe.description %></p>
+					<p><%= feature.description %></p>
 					<a href="/recipes/<%-feature.recipeID%>"><img src=<%= feature.recipeImg %>></a>
 				<% }); %>
 			</div>
