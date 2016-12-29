@@ -1,3 +1,5 @@
+// 'use strict';
+
 var mysql = require('mysql');
 var config = require('./config.js');
 var showcase = require('./showcase.js')
