@@ -42,6 +42,12 @@ h4 {
 	color: white;
 }
 
+h5 {
+	font-family: 'Baskerville', Helvetica, Arial, sans-serif;
+	text-align: left;
+	font-size: 1em;
+}
+
 h6 {
 	color: #111;
 	font-weight: 900;

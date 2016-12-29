@@ -19,9 +19,12 @@
 				<% }); %>
 			</div>
 			<div class="gallery">
-				<% recipes.forEach(function(recipe) { %>
-					<a href="/recipes/<%-recipe.recipeID%>"><p><%= recipe.recipeName %></p></a>
-				<% }); %>
+				<div class="gallery-item">
+					<% recipes.forEach(function(recipe) { %>
+						<a href="/recipes/<%-recipe.recipeID%>"><h5><%= recipe.recipeName %></h5></a>
+						<p><%= recipe.description %></p>
+					<% }); %>
+				</div>
 			</div>
 		</div>
 	</div>
