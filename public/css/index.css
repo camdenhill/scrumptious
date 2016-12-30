@@ -6,6 +6,11 @@ nav {
 	border: none;
 }
 
+h1 {
+	padding-bottom: 40px;
+	border-bottom: solid 1px #111;
+}
+
 img[src="/img/LogoFill.png"], img[src="/img/Logo.png"] {
 	border: none;
 }
@@ -22,6 +27,8 @@ div.featured {
 	height: 400px;
 	overflow: hidden;
 	margin-top: 30px;
+	padding-bottom: 40px;
+	border-bottom: solid 1px #111;
 }
 
 div.featured img {
