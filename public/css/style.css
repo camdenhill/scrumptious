@@ -315,4 +315,6 @@ img.expand:hover {
 	cursor: pointer;
 }
 
-
+i {
+	margin-top: 10px;
+}
