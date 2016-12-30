@@ -5,6 +5,7 @@
 	<link href="/css/parent.css" rel="stylesheet" type="text/css"/>
 	<link href="/css/style.css" rel="stylesheet" type="text/css"/>
 	<link href="/css/index.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,6 +18,7 @@
 					<div>
 						<h5><%= feature.recipeName %></h5>
 						<p><%= feature.description %></p>
+						<i class="fa fa-clock-o fa-lg"></i> <p>1 hour 15 minutes</p>
 					</div>
 					<a href="/recipes/<%-feature.recipeID%>"><img src=<%= feature.recipeImg %>></a>
 				<% }); %>
