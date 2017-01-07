@@ -15,9 +15,12 @@ input.main-search {
 	padding: 0 10px;
 }
 
-img[src="/img/Bookmark.png"] {
+img[src="/img/Bookmark.png"], img[src="/img/BookmarkOutlines.png"], img[src="/img/BookmarkOutlinesFill.png"] {
 	width: auto;
 	height: 50%;
+}
+
+nav img[src="/img/Bookmark.png"] {
 	float: right;
 	margin-top: 12px;
 	margin-right: 15px;
