@@ -17,7 +17,7 @@ input.main-search {
 
 img[src="/img/Bookmark.png"], img[src="/img/BookmarkOutlines.png"], img[src="/img/BookmarkOutlinesFill.png"] {
 	width: auto;
-	height: 50%;
+	height: 25px;
 }
 
 nav img[src="/img/Bookmark.png"] {
