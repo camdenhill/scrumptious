@@ -44,9 +44,9 @@ module.exports = function(app)
 		});
 	})
 
-	app.post('/recipes/:recipeID/bookmark', function (req, res) {
-		res.redirect('/');		
-	})
+	// app.post('/recipes/:recipeID/bookmark', function (req, res) {
+	// 	res.redirect('/');		
+	// })
 
 	app.get('/insert', function (req, res) {
 		res.render('insert.ejs')
