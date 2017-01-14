@@ -16,7 +16,7 @@
 			<div class="featured">
 				<% featured.forEach(function(feature) { %>
 					<div>
-						<h5><%= feature.recipeName %></h5>
+						<h2><%= feature.recipeName %></h2>
 						<p class="baskerville"><%= feature.description %></p>
 						<i class="fa fa-clock-o fa-flip-horizontal"></i> <h6>1 hour 15 minutes</h6>
 					</div>
@@ -27,7 +27,7 @@
 				<% recipes.forEach(function(recipe) { %>
 					<div class="gallery-item">
 						<a href="/recipes/<%-recipe.recipeID%>"><img src=<%= recipe.recipeImg %>></a>
-						<h5><%= recipe.recipeName %></h5>
+						<h3><%= recipe.recipeName %></h3>
 						<p class="baskerville"><%= recipe.description %></p>
 					</div>
 				<% }); %>
