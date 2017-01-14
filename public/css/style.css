@@ -102,7 +102,7 @@ div.how-many-serve-div {
 	width: 410px;
 }
 
-h3.how-many-serve-h3, select.how-many-serve-select {
+h5.how-many-serve-h5, select.how-many-serve-select {
 	float: left;
 	margin: 0 5px;
 }

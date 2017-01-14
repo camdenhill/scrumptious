@@ -48,10 +48,15 @@ h3 {
 	text-align: left;
 	font-weight: 400;
 	font-size: 1.4em;	
-	padding: 20px 0;}
+	padding: 20px 0;
+}
 
 h4 {
 	color: white;
+}
+
+h5 {
+	font-size: 1em;
 }
 
 h6 {
