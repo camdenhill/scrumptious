@@ -1,7 +1,7 @@
 'use strict';
 
 var showcase = {
-	featured : '7',
+	featured : '3',
 	gallery : '(2, 3, 7)'
 };
 
