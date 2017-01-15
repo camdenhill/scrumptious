@@ -85,10 +85,14 @@ div.ingredients h4 {
 	color: #222;	/* This will be one of the factors in custom colorHex css files */
 }
 
+.how-many-serve {
+	width: 340px;
+	display: block;
+	margin:	auto;
+}
+
 .how-many-serve * {
 	float: left;
-	display: block;
-	margin: auto;
 }
 
 .how-many-serve select {
