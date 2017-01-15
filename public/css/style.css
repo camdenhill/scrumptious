@@ -20,12 +20,6 @@ img[src="/img/Bookmark.png"], img[src="/img/BookmarkOutlines.png"], img[src="/im
 	height: 25px;
 }
 
-nav img[src="/img/Bookmark.png"] {
-	float: right;
-	margin-top: 12px;
-	margin-right: 15px;
-}
-
 span.underline {
 	text-decoration: underline;
 }

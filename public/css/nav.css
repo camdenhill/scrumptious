@@ -1,0 +1,9 @@
+nav img[src="/img/Bookmark.png"] {
+	float: right;
+	margin-top: 12px;
+	margin-right: 15px;
+}
+
+nav h2 {
+	display: inline-block;
+}
