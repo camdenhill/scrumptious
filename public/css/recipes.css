@@ -1,3 +1,7 @@
+h1 {
+	text-align: center;
+}
+
 img[src="/img/BookmarkOutlines.png"], img[src="/img/BookmarkOutlinesFill.png"] {
 }
 
@@ -81,13 +85,8 @@ div.ingredients h4 {
 	color: #222;	/* This will be one of the factors in custom colorHex css files */
 }
 
-div.how-many-serve-div {
-	width: 410px;
-}
-
-h5.how-many-serve-h5, select.how-many-serve-select {
+.how-many-serve-select {
 	float: left;
-	margin: 0 5px;
 }
 
 select.how-many-serve-select {

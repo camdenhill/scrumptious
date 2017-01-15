@@ -6,4 +6,8 @@ nav img[src="/img/Bookmark.png"] {
 
 nav h2 {
 	display: inline-block;
+	position: absolute;
+	left: 37%;
+	left: calc(50% - 135px);
+	margin-top: 15px;
 }
