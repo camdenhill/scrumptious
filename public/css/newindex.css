@@ -63,5 +63,13 @@ nav {
 /* GALLERY */
 #gallery {
 	clear: both;
-	float: none;
+	float: left;
+	width: 50%;
+	margin-left: 10%;
+}
+
+aside {
+	width: 30%;
+	margin-left: 10%;
+	float: left;
 }
