@@ -83,6 +83,8 @@ img[src="/img/Triangle.png"] {
 }
 
 .featured-item {
+	border-top: solid 1px black;
+	border-bottom: solid 4px black;
 	width: 25vw;
 	height: 25vw;
 	float: left;
@@ -100,7 +102,6 @@ img[src="/img/Triangle.png"] {
 	float: none;
 	padding-top: 40px;
 	width: 100%;
-	border-top: solid 1px black;
 }
 
 #gallery {
