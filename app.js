@@ -4,7 +4,7 @@ var db = require('./db.js');
 
 module.exports = function(app)
 {
-	app.get('/', function (req, res) {
+	app.get('/old', function (req, res) {
 		db.getGallery(function (err1, recipes) {
 			if (err1) throw err1;
 			db.getFeatured(function (err2, featured) {
@@ -17,7 +17,7 @@ module.exports = function(app)
 		})
 	})
 
-	app.get('/new', function (req, res) {
+	app.get('/', function (req, res) {
 		db.getCategories(function (err1, categories) {
 			if (err1) throw err1;
 			var galleryTitles = db.getGalleryTitles();
