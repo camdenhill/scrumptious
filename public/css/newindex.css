@@ -82,7 +82,7 @@ img[src="/img/Triangle.png"] {
 	width: 100%;
 }
 
-#featured-item {
+.featured-item {
 	width: 25%;
 	height: auto;
 	float: left;
