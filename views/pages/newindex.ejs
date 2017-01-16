@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scrumptious</title>
+	<link href="/css/parent.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/nav.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/index.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="/img/Favicon.png" rel="icon"/>
+</head>
+
+<body>
+	<% include ../partials/nav %>
+	<!-- Includes the top scrolling and 4 featured per category -->
+	<div>
+		<!-- Includes scrolling category -->
+		<div>
+				<% categories.forEach(function(category) { %>
+					<div>
+						<a href="#"><img src=<%= category.icon %>></a>
+						<h3><%= category.name %></h3>
+					</div>
+				<% }); %>
+		</div>
+
+		<!-- Includes 4 per category -->
+		<div>
+			<% categoryRecipes.forEach(function(categoryRecipe) {%>
+				<a href="#"><img src=<%= categoryRecipe.image %>></a>
+				<h1><%= categoryRecipe.name %></h1>
+				<p><%= categoryRecipe.description %></p>
+				<div>
+					<img/>
+					<h5><%= categoryRecipe.steps %></h5>
+
+					<img/>
+					<h5><%= categoryRecipe.ingredients %></h5>
+
+					<img/>
+					<h5><%= categoryRecipe.time %></h5>
+				</div>
+			<% }); %>
+		</div>
+	</div>
+
+	<!-- Includes the alternating side recipes and the aside with tips and ads -->
+	<div>
+		<!-- Includes the alternating side recipes -->
+		<div>
+		<% galleryRecipes.forEach(function(galleryRecipe) {%>
+			<a href="#"><img src=<%= galleryRecipe.image %>></a>
+			<h3><%= galleryRecipe.title %></h3>
+			<h1><%= galleryRecipe.name %></h1>
+			<p><%= categoryRecipe.description %></p>
+				<div>
+					<img/>
+					<h5><%= categoryRecipe.steps %></h5>
+
+					<img/>
+					<h5><%= categoryRecipe.ingredients %></h5>
+
+					<img/>
+					<h5><%= categoryRecipe.time %></h5>
+				</div>
+			<% }); %>
+		</div>
+
+		<!-- Includes the tips and tricks, and possible ads -->
+		<aside>
+			<!-- Includes daily tips -->
+			<div>
+				<%= tips.forEach(function(tip) {%>
+				<div>
+					<h3>Tip of the day <%= tip.date %></h3>
+					<p><%= tip.text %></p>
+				</div>
+			</div>
+
+			<!-- Includes ads -->
+			<div></div>
+		</aside>
+	</div>
+
+
+	<% include ../partials/footer %>
+</body>
+</html>

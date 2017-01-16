@@ -17,6 +17,10 @@ module.exports = function(app)
 		})
 	})
 
+	app.get('/a', function (req, res) {
+		res.render('newindex.ejs')
+	})
+
 	app.get('/recipes/:recipeID', function (req, res) {
 		db.getRecipe(req.params.recipeID, function (err1, ingredients) {
 			if (err1) throw err1;
