@@ -277,6 +277,8 @@ exports.getCategories = function(callback) {
 		console.log('Connection established');
 	});
 
+	categoryNames = categoryNames.join();
+	categoryNames = '(' + categoryNames + ')';
 	console.log(categoryNames);
 
 	var sql = 'SELECT * FROM categories WHERE name IN ' + categoryNames;
