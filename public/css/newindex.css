@@ -75,6 +75,21 @@ img[src="/img/Triangle.png"] {
 	opacity: 1;
 }
 
+
+
+/* FEATURED OF CATEGORY */
+#featured {
+	width: 100%;
+}
+
+#featured-item {
+	width: 25%;
+	height: auto;
+	float: left;
+}
+
+
+
 /* GALLERY */
 #gallery-and-aside {
 	clear: both;
