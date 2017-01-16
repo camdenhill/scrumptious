@@ -254,7 +254,7 @@ exports.getRecipeSteps = function(recipeID, callback) {
 /*
 	getCategories returns the list of categories with their images
 */
-exports.getCategories = function(recipeID, callback) {
+exports.getCategories = function(callback) {
 	var categories = showcase.categories;
 	var categoryNames = [];
 	for (var i = 0; i < categories.length; i++) {
@@ -276,6 +276,8 @@ exports.getCategories = function(recipeID, callback) {
 		}
 		console.log('Connection established');
 	});
+
+	console.log(categoryNames);
 
 	var sql = 'SELECT * FROM categories WHERE name IN ' + categoryNames;
 	var data;
