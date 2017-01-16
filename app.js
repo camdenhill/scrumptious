@@ -20,20 +20,17 @@ module.exports = function(app)
 	app.get('/new', function (req, res) {
 		db.getCategories(function (err1, categories) {
 			if (err1) throw err1;
+			var galleryTitles = db.getGalleryTitles();
+			console.log('camden');
 			db.getGallery(function (err2, gallery) {
-				if (err2) throw err2;
-				console.log('camden');
-				db.getGalleryTitles(function (err3, galleryTitles) {
-					if (err3) throw err3;
-					console.log('hill');
-					console.log(categories);
-					console.log(gallery);
-					console.log(galleryTitles);
-					res.render('newindex.ejs', {
-						categories : categories,
-						gallery : gallery,
-						galleryTitles : galleryTitles
-					})
+				if (err3) throw err3;
+				console.log('hill');
+				console.log(categories);
+				console.log(gallery);
+				res.render('newindex.ejs', {
+					categories : categories,
+					gallery : gallery,
+					galleryTitles : galleryTitles
 				})
 			})
 		})
