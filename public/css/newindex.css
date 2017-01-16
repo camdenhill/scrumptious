@@ -166,3 +166,11 @@ aside {
 .tip:last-of-type {
 	border-bottom: solid 4px black;
 }
+
+#killer {
+	width: 100%;
+	padding: 10px 0;
+	background: #82ab31;
+	display: inline-block;
+	border-top: solid 1px black;
+}
