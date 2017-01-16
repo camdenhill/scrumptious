@@ -256,10 +256,6 @@ exports.getRecipeSteps = function(recipeID, callback) {
 */
 exports.getCategories = function(callback) {
 	var categories = showcase.categories;
-	var categoryNames = [];
-	for (var i = 0; i < categories.length; i++) {
-		categoryNames.push(categories[i].name);
-	}
 
 	connection = mysql.createConnection({
 		host: config.development.database.host,
@@ -277,11 +273,7 @@ exports.getCategories = function(callback) {
 		console.log('Connection established');
 	});
 
-	categoryNames = categoryNames.join();
-	categoryNames = '(' + categoryNames + ')';
-	console.log(categoryNames);
-
-	var sql = 'SELECT * FROM categories WHERE name IN ' + categoryNames;
+	var sql = 'SELECT * FROM categories WHERE id IN ' + categories;
 	var data;
 	connection.query(sql, function (err, res) {
 		connection.end();

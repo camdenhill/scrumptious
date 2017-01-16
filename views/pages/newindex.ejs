@@ -19,29 +19,10 @@
 		<div>
 				<% categories.forEach(function(category) { %>
 					<div>
-						<a href="#"><img src=<%= category.icon %>></a>
+						<a href="#"><img src=<%= category.img %>></a>
 						<h3><%= category.name %></h3>
 					</div>
 				<% }); %>
-		</div>
-
-		<!-- Includes 4 per category -->
-		<div>
-			<% categoryRecipes.forEach(function(categoryRecipe) {%>
-				<a href="#"><img src=<%= categoryRecipe.image %>></a>
-				<h1><%= categoryRecipe.name %></h1>
-				<p><%= categoryRecipe.description %></p>
-				<div>
-					<img/>
-					<h5><%= categoryRecipe.stepsCount %></h5>
-
-					<img/>
-					<h5><%= categoryRecipe.ingredientsCount %></h5>
-
-					<img/>
-					<h5><%= categoryRecipe.time %></h5>
-				</div>
-			<% }); %>
 		</div>
 	</div>
 
@@ -70,13 +51,7 @@
 		<!-- Includes the tips and tricks, and possible ads -->
 		<aside>
 			<!-- Includes daily tips -->
-			<div>
-				<%= tips.forEach(function(tip) {%>
-				<div>
-					<h3>Tip of the day <%= tip.date %></h3>
-					<p><%= tip.text %></p>
-				</div>
-			</div>
+			<div></div>
 
 			<!-- Includes ads -->
 			<div></div>

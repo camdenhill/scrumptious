@@ -1,12 +1,9 @@
 'use strict';
 
 var showcase = {
-	categories : [
-		{ name : "Beat the cold", icon : "" },
-		{ name : "Date night", icon : "" }
-	],
-	featured : '3',
-	gallery : '(2, 3)',
+	categories : '(1, 2, 3, 4, 5)',	// Category IDs
+	featured : '3',					// Recipe IDs
+	gallery : '(2, 3)',				// Recipe IDs
 	galleryTitles : ["Featured recipe of the day", "So hot right now"]
 };
 
