@@ -187,7 +187,7 @@ exports.getGallery = function(callback) {
 */
 exports.getGalleryTitles = function(callback) {
 	var galleryTitles = showcase.galleryTitles;
-	callback(galleryTitles);
+	return galleryTitles;
 }
 
 /*
