@@ -84,6 +84,7 @@ img[src="/img/Triangle.png"] {
 
 .featured-item {
 	width: 25vw;
+	height: 25vw;
 	float: left;
 }
 
