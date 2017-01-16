@@ -73,16 +73,26 @@ nav {
 	margin-left: 10%;
 }
 
+#gallery h3 {
+	padding-top: 10px;
+}
+
 .gallery-item {
 	width: 100%;
+	clear: both;
 }
 
 .gallery-item img, .gallery-item-info {
 	width: 50%;
+	float: left;
 }
 
 .gallery-item img {
 	height: auto;
+}
+
+.gallery-item:nth-child(even) img {
+	float: right;
 }
 
 aside {
