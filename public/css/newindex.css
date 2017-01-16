@@ -71,6 +71,14 @@ img[src="/img/Triangle.png"] {
 	opacity: 0;
 }
 
+.category {
+	opacity: .3;
+}
+
+.category:first-of-type {
+	opacity: 1;
+}
+
 .category:first-of-type img[src="/img/Triangle.png"] {
 	opacity: 1;
 }
