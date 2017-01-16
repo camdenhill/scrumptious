@@ -17,9 +17,9 @@ module.exports = function(app)
 		})
 	})
 
-	app.get('/asdf', function (req, res) {
-		res.render('newindex.ejs')
-	})
+	// app.get('/asdf', function (req, res) {
+		// res.render('newindex.ejs')
+	// })
 
 	app.get('/recipes/:recipeID', function (req, res) {
 		db.getRecipe(req.params.recipeID, function (err1, ingredients) {
