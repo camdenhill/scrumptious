@@ -258,7 +258,7 @@ exports.getCategories = function(recipeID, callback) {
 	var categories = showcase.categories;
 	var categoryNames = [];
 	for (var i = 0; i < categories.length; i++) {
-		categoryNames.append(categories[i].name);
+		categoryNames.push(categories[i].name);
 	}
 
 	connection = mysql.createConnection({
