@@ -186,8 +186,7 @@ exports.getGallery = function(callback) {
 	Get all recipe metadata for recipes in gallery (subset of recipes to be displayed on index)
 */
 exports.getGalleryTitles = function() {
-	var galleryTitles = showcase.galleryTitles;
-	return galleryTitles;
+	return showcase.galleryTitles;
 }
 
 /*

@@ -21,7 +21,7 @@ module.exports = function(app)
 		db.getCategories(function (err1, categories) {
 			if (err1) throw err1;
 			var galleryTitles = db.getGalleryTitles();
-			console.log('camden');
+			console.log(galleryTitles);
 			db.getGallery(function (err2, gallery) {
 				if (err3) throw err3;
 				console.log('hill');
