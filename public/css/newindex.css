@@ -39,22 +39,22 @@ nav {
 	width: 80%;
 }
 
-#category {
+.category {
 	width: 20%;
 	float: left;
 }
 
-#category img, #category h3 {
+.category img, .category h3 {
 	display: block;
 	margin: auto;
 }
 
-#category img {
+.category img {
 	width: auto;
 	height: 50px;
 }
 
-#category h3 {
+.category h3 {
 	width: 70%;
 	text-align: center;
 }
@@ -70,6 +70,18 @@ nav {
 	float: left;
 	width: 50%;
 	margin-left: 10%;
+}
+
+.gallery-item {
+	width: 100%;
+}
+
+.gallery-item img, .gallery-item-info {
+	width: 50%;
+}
+
+.gallery-item img {
+	height: auto;
 }
 
 aside {

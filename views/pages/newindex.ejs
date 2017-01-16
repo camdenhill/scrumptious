@@ -23,7 +23,7 @@
 
 			<div id="categories">
 				<% categories.forEach(function(category) { %>
-					<div id="category">
+					<div class="category">
 						<a href="#"><img src=<%= category.img %>></a>
 						<h3><%= category.name %></h3>
 					</div>
@@ -41,19 +41,23 @@
 		<!-- Includes the alternating side recipes -->
 		<div id="gallery">
 			<% for (var i=0; i<gallery.length; i++) { %>
-				<a href="#"><img src=<%= gallery[i].image %>></a>
-				<h3><%= galleryTitles[i] %></h3>
-				<h1><%= gallery[i].recipeName %></h1>
-				<p><%= gallery[i].description %></p>
-				<div>
-					<img/>
-					<h5><%= gallery[i].stepsCount %></h5>
+				<div class="gallery-item">
+					<a href="#"><img src=<%= gallery[i].recipeImg %>></a>
+					<div class="gallery-item-info">
+						<h3><%= galleryTitles[i] %></h3>
+						<h1><%= gallery[i].recipeName %></h1>
+						<p><%= gallery[i].description %></p>
+						<div>
+							<img/>
+							<h5><%= gallery[i].stepsCount %></h5>
 
-					<img/>
-					<h5><%= gallery[i].ingredientsCount %></h5>
+							<img/>
+							<h5><%= gallery[i].ingredientsCount %></h5>
 
-					<img/>
-					<h5><%= gallery[i].time %></h5>
+							<img/>
+							<h5><%= gallery[i].time %></h5>
+						</div>
+					</div>
 				</div>
 			<% } %>
 		</div>
@@ -69,7 +73,5 @@
 		</aside>
 	</div>
 
-
-	<% include ../partials/footer %>
 </body>
 </html>
