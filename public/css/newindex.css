@@ -73,10 +73,6 @@ nav {
 	margin-left: 10%;
 }
 
-#gallery h3 {
-	padding-top: 10px;
-}
-
 .gallery-item {
 	width: 100%;
 	clear: both;
@@ -89,6 +85,11 @@ nav {
 
 .gallery-item img {
 	height: auto;
+}
+
+.gallery-item-info {
+	padding: 20px;
+	box-sizing: border-box;
 }
 
 .gallery-item:nth-child(even) img {
