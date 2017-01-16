@@ -57,7 +57,7 @@ h3 {
 
 h4 {
 	font-family: 'Baskerville', serif;
-	font-size: 14px;
+	font-size: 18px;
 	text-align: center;
 }
 
@@ -121,8 +121,7 @@ i {
 }
 
 footer {
-	height: 100px;
+	height: 150px;
 	width: 100%;
-	margin-top: 40px;
 	background: #222;
 }

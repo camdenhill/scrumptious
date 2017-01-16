@@ -228,3 +228,7 @@ img[src="/img/Comment.png"] {
 	float: right;
 	height: 20px;
 }
+
+footer {
+	margin-top: 40px;
+}
