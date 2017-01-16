@@ -69,7 +69,7 @@
 		<div id="gallery">
 			<% for (var i=0; i<gallery.length; i++) { %>
 				<div class="gallery-item">
-					<a href="/recipes/<%-feature.recipeID%>"><img src=<%= gallery[i].recipeImg %>></a>
+					<a href="/recipes/<%-gallery[i].recipeID%>"><img src=<%= gallery[i].recipeImg %>></a>
 					<div class="gallery-item-info">
 						<h3><%= galleryTitles[i] %></h3>
 						<h1><%= gallery[i].recipeName %></h1>
