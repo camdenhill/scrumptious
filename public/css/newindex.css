@@ -15,6 +15,10 @@ nav {
 	height: 100px;
 }
 
+#top-scroll * {
+	height: 100%;
+}
+
 #left, #right {
 	width: 10%;
 }
