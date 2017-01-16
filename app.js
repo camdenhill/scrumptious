@@ -24,6 +24,9 @@ module.exports = function(app)
 				if (err2) throw err2;
 				db.getGalleryTitles(function (err3, galleryTitles) {
 					if (err3) throw err3;
+					console.log(categories);
+					console.log(gallery);
+					console.log(galleryTitles);
 					res.render('newindex.ejs', {
 						categories : categories,
 						gallery : gallery,
