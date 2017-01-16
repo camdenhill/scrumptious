@@ -59,12 +59,23 @@ nav {
 	text-align: center;
 }
 
+img[src="/img/Triangle.png"] {
+	width: 10px;
+	height: auto;
+	padding-top: 30px;
+	clear: both;
+	float: none;
+	display: block;
+	margin: auto;
+}
 
 /* GALLERY */
 #gallery-and-aside {
 	clear: both;
 	float: none;
 	padding-top: 40px;
+	width: 100%;
+	border-top: solid 1px black;
 }
 
 #gallery {
@@ -97,7 +108,7 @@ nav {
 }
 
 aside {
-	width: 25%;
+	width: 20%;
 	margin-left: 10%;
 	float: left;
 }
