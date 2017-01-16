@@ -16,18 +16,20 @@
 	<!-- Includes the top scrolling and 4 featured per category -->
 	<div>
 		<!-- Includes scrolling category -->
-		<div>
-				<% categories.forEach(function(category) { %>
-					<div>
-						<a href="#"><img src=<%= category.img %>></a>
-						<h3><%= category.name %></h3>
-					</div>
-				<% }); %>
+		<div class="top-scroll">
+			<img src="/img/Left.png"/>
+			<% categories.forEach(function(category) { %>
+				<div>
+					<a href="#"><img src=<%= category.img %>></a>
+					<h3><%= category.name %></h3>
+				</div>
+			<% }); %>
+			<img src="/img/Right.png"/>
 		</div>
 	</div>
 
 	<!-- Includes the alternating side recipes and the aside with tips and ads -->
-	<div>
+	<div class="gallery">
 		<!-- Includes the alternating side recipes -->
 		<div>
 			<% for (var i=0; i<gallery.length; i++) { %>
