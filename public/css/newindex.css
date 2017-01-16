@@ -111,6 +111,7 @@ img[src="/img/Triangle.png"] {
 	float: none;
 	padding-top: 40px;
 	width: 100%;
+	display: inline-block;
 }
 
 #gallery {
