@@ -62,10 +62,6 @@ module.exports = function(app)
 		});
 	})
 
-	// app.post('/recipes/:recipeID/bookmark', function (req, res) {
-	// 	res.redirect('/');		
-	// })
-
 	app.get('/insert', function (req, res) {
 		res.render('insert.ejs')
 	})
@@ -92,8 +88,7 @@ module.exports = function(app)
 		res.render('success.ejs')
 	})
 
-
-	app.use(function(req, res, next) {
-		res.status(404).render('404.ejs');
-	});
+	// app.use(function(req, res, next) {
+		// res.status(404).render('404.ejs');
+	// });
 }
