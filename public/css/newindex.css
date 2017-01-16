@@ -140,6 +140,10 @@ img[src="/img/Triangle.png"] {
 	box-sizing: border-box;
 }
 
+.recipe-data {
+	margin-top: 20px;
+}
+
 .gallery-item:nth-child(even) img {
 	float: right;
 }
