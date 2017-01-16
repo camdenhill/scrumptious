@@ -147,3 +147,12 @@ aside {
 	margin-left: 10%;
 	float: left;
 }
+
+.tip {
+	padding: 10px 0 30px;
+	border-bottom: solid 1px black;
+}
+
+.tip:last-of-type {
+	border-bottom: solid 4px black;
+}
