@@ -17,6 +17,24 @@ module.exports = function(app)
 		})
 	})
 
+	app.get('/new', function (req, res) {
+		res.render('insert.ejs')
+		// db.getCategories(function (err1, categories) {
+		// 	if (err1) throw err1;
+		// 	db.getGallery(function (err2, gallery) {
+		// 		if (err2) throw err2;
+		// 		db.getGalleryTitles(function (err3, galleryTitles) {
+		// 			if (err3) throw err3;
+		// 			res.render('newindex.ejs', {
+		// 				categories : categories,
+		// 				gallery : gallery,
+		// 				galleryTitles : galleryTitles
+		// 			})
+		// 		})
+		// 	})
+		// })
+	})
+
 	app.get('/recipes/:recipeID', function (req, res) {
 		db.getRecipe(req.params.recipeID, function (err1, ingredients) {
 			if (err1) throw err1;
@@ -69,7 +87,6 @@ module.exports = function(app)
 		db.insertRecipeIngredient(recipeID, quantity, item);
 		res.render('success.ejs')
 	})
-
 
 	app.use(function(req, res, next) {
 		res.status(404).render('404.ejs');
