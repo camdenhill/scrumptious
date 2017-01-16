@@ -18,20 +18,21 @@ module.exports = function(app)
 	})
 
 	app.get('/new', function (req, res) {
-		db.getCategories(function (err1, categories) {
-			if (err1) throw err1;
-			db.getGallery(function (err2, gallery) {
-				if (err2) throw err2;
-				db.getGalleryTitles(function (err3, galleryTitles) {
-					if (err3) throw err3;
-					res.render('newindex.ejs', {
-						categories : categories,
-						gallery : gallery,
-						galleryTitles : galleryTitles
-					})
-				})
-			})
-		})
+		res.render('insert.ejs')
+		// db.getCategories(function (err1, categories) {
+		// 	if (err1) throw err1;
+		// 	db.getGallery(function (err2, gallery) {
+		// 		if (err2) throw err2;
+		// 		db.getGalleryTitles(function (err3, galleryTitles) {
+		// 			if (err3) throw err3;
+		// 			res.render('newindex.ejs', {
+		// 				categories : categories,
+		// 				gallery : gallery,
+		// 				galleryTitles : galleryTitles
+		// 			})
+		// 		})
+		// 	})
+		// })
 	})
 
 	app.get('/recipes/:recipeID', function (req, res) {
