@@ -12,7 +12,7 @@ nav {
 
 #top-scroll {
 	width: 100%;
-	height: 100px;
+	padding-top: 40px;
 }
 
 #top-scroll * {
@@ -44,11 +44,14 @@ nav {
 	float: left;
 }
 
+#category img, #category h3 {
+	display: block;
+	margin: auto;
+}
+
 #category img {
 	width: auto;
 	height: 50%;
-	display: block;
-	margin: auto;
 }
 
 #category h3 {
