@@ -13,6 +13,7 @@ nav {
 #top-scroll {
 	width: 100%;
 	padding-top: 40px;
+	margin-top: 50px;
 }
 
 #top-scroll * {
