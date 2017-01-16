@@ -71,7 +71,7 @@ img[src="/img/Triangle.png"] {
 	opacity: 0;
 }
 
-img[src="/img/Triangle.png"]:first-of-type {
+.category:first-of-type img[src="/img/Triangle.png"] {
 	opacity: 1;
 }
 
