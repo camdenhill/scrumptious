@@ -17,7 +17,7 @@ module.exports = function(app)
 		})
 	})
 
-	app.get('/a', function (req, res) {
+	app.get('/asdf', function (req, res) {
 		res.render('newindex.ejs')
 	})
 
