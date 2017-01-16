@@ -32,6 +32,8 @@ nav {
 	height: 20px;
 	display: block;
 	margin: auto;
+	padding-top: 20px;
+	opacity: .3;
 }
 
 #categories {
