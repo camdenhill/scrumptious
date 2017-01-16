@@ -95,13 +95,16 @@ img[src="/img/Triangle.png"] {
 	border-top: solid 1px black;
 	border-bottom: solid 4px black;
 	width: 25vw;
+	min-width: 265px;
 	height: 25vw;
+	min-height: 265px;
 	float: left;
 }
 
 .featured-item img {
 	width: 100%;
 	height: 25vw;
+	min-height: 265px;
 }
 
 
@@ -123,6 +126,7 @@ img[src="/img/Triangle.png"] {
 .gallery-item {
 	width: 100%;
 	height: 25vw;
+	min-height: 265px;
 	clear: both;
 }
 
