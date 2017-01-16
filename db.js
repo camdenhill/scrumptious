@@ -182,6 +182,13 @@ exports.getGallery = function(callback) {
 	});
 }
 
+/*
+	Get all recipe metadata for recipes in gallery (subset of recipes to be displayed on index)
+*/
+exports.getGalleryTitles = function(callback) {
+	var galleryTitles = showcase.galleryTitles;
+	callback(err, galleryTitles);
+}
 
 /*
 	Get featured recipe
@@ -240,6 +247,41 @@ exports.getRecipeSteps = function(recipeID, callback) {
 	var data;
 	connection.query(sql, recipeID, function (err, res) {
 		connection.end();
+		callback(err, res);
+	});
+}
+
+/*
+	getCategories returns the list of categories with their images
+*/
+exports.getCategories = function(recipeID, callback) {
+	var categories = showcase.categories;
+	var categoryNames = [];
+	for (var i = 0; i < categories.length; i++) {
+		categoryNames.append(categories[i].name);
+	}
+
+	connection = mysql.createConnection({
+		host: config.development.database.host,
+		port: config.development.database.port,
+		user: config.development.database.username,
+		password: config.development.database.password,
+		database: config.development.database.db
+	});
+	
+	connection.connect(function(err) {
+		if (err) {
+			console.log('Error connecting to database');
+			return;
+		}
+		console.log('Connection established');
+	});
+
+	var sql = 'SELECT * FROM categories WHERE name IN ' + categoryNames;
+	var data;
+	connection.query(sql, function (err, res) {
+		connection.end();
+		console.log(res);
 		callback(err, res);
 	});
 }

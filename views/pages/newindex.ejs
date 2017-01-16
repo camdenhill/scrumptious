@@ -33,10 +33,10 @@
 				<p><%= categoryRecipe.description %></p>
 				<div>
 					<img/>
-					<h5><%= categoryRecipe.steps %></h5>
+					<h5><%= categoryRecipe.stepsCount %></h5>
 
 					<img/>
-					<h5><%= categoryRecipe.ingredients %></h5>
+					<h5><%= categoryRecipe.ingredientsCount %></h5>
 
 					<img/>
 					<h5><%= categoryRecipe.time %></h5>
@@ -49,22 +49,22 @@
 	<div>
 		<!-- Includes the alternating side recipes -->
 		<div>
-		<% galleryRecipes.forEach(function(galleryRecipe) {%>
-			<a href="#"><img src=<%= galleryRecipe.image %>></a>
-			<h3><%= galleryRecipe.title %></h3>
-			<h1><%= galleryRecipe.name %></h1>
-			<p><%= categoryRecipe.description %></p>
+			<% for (var i=0; i<gallery.length; i++) { %>
+				<a href="#"><img src=<%= gallery[i].image %>></a>
+				<h3>galleryTitles[i]</h3>
+				<h1><%= gallery[i].name %></h1>
+				<p><%= gallery[i].description %></p>
 				<div>
 					<img/>
-					<h5><%= categoryRecipe.steps %></h5>
+					<h5><%= gallery[i].stepsCount %></h5>
 
 					<img/>
-					<h5><%= categoryRecipe.ingredients %></h5>
+					<h5><%= gallery[i].ingredientsCount %></h5>
 
 					<img/>
-					<h5><%= categoryRecipe.time %></h5>
+					<h5><%= gallery[i].time %></h5>
 				</div>
-			<% }); %>
+			<% } %>
 		</div>
 
 		<!-- Includes the tips and tricks, and possible ads -->
