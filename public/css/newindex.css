@@ -170,6 +170,7 @@ aside {
 #killer {
 	width: 100%;
 	padding: 20px 0;
+	margin-top: 40px;
 	background: #82ab31;
 	display: inline-block;
 	border-top: solid 1px black;

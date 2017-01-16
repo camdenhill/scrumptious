@@ -61,3 +61,7 @@ img.expand:hover {
 .bottom-thick {
 	border-bottom: solid 4px #222;
 }
+
+.link {
+	text-decoration: underline;
+}
