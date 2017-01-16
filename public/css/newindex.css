@@ -13,7 +13,6 @@ nav {
 #top-scroll {
 	width: 100%;
 	padding-top: 40px;
-	border-bottom: solid 1px #222;
 }
 
 #top-scroll * {
@@ -58,4 +57,11 @@ nav {
 #category h3 {
 	width: 70%;
 	text-align: center;
+}
+
+
+/* GALLERY */
+#gallery {
+	clear: both;
+	float: none;
 }
