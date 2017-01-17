@@ -300,7 +300,7 @@ exports.getTips = function(callback) {
 		console.log('Connection established');
 	});
 
-	var sql = 'SELECT text, date FROM tips ORDER BY date desc limit 2';
+	var sql = 'SELECT * FROM tips ORDER BY date desc limit 2';
 	connection.query(sql, function (err, res) {
 		connection.end();
 		console.log(res);
