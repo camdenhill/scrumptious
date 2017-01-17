@@ -21,17 +21,15 @@ module.exports = function(app)
 		db.getCategories(function (err1, categories) {
 			if (err1) throw err1;
 			var galleryTitles = db.getGalleryTitles();
-			console.log(galleryTitles);
-			console.log('camden');			
 			db.getGallery(function (err2, gallery) {
 				if (err2) throw err2;
-				console.log('hill');
-				console.log(categories);
-				console.log(gallery);
-				res.render('newindex.ejs', {
-					categories : categories,
-					gallery : gallery,
-					galleryTitles : galleryTitles
+				db.getTips(function (err3, tips) {
+					res.render('newindex.ejs', {
+						categories : categories,
+						gallery : gallery,
+						galleryTitles : galleryTitles,
+						tips : tips
+					})
 				})
 			})
 		})

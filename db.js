@@ -280,3 +280,30 @@ exports.getCategories = function(callback) {
 		callback(err, res);
 	});
 }
+/*
+	getTips returns tip text and the date, appropriately formatted
+*/
+exports.getTips = function(callback) {
+	connection = mysql.createConnection({
+		host: config.development.database.host,
+		port: config.development.database.port,
+		user: config.development.database.username,
+		password: config.development.database.password,
+		database: config.development.database.db
+	});
+	
+	connection.connect(function(err) {
+		if (err) {
+			console.log('Error connecting to database');
+			return;
+		}
+		console.log('Connection established');
+	});
+
+	var sql = 'SELECT text, date FROM tips ORDER BY date desc limit 2';
+	connection.query(sql, function (err, res) {
+		connection.end();
+		console.log(res);
+		callback(err, res);
+	});
+}

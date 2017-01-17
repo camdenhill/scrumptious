@@ -39,9 +39,3 @@
 				</div>
 			<% } %>
 		</div>
-
-				<%= tips.forEach(function(tip) {%>
-				<div>
-					<h3>Tip of the day <%= tip.date %></h3>
-					<p><%= tip.text %></p>
-				</div>
