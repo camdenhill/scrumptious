@@ -102,10 +102,11 @@
 				</div>
 
 				<%= tips.forEach(function(tip) {%>
-				<div class="tip">
-					<h3>Tip of the day <%= tip.date %></h3>
-					<p><%= tip.text %></p>
-				</div>
+					<div class="tip">
+						<h3>Tip of the day <%= tip.date %></h3>
+						<p><%= tip.text %></p>
+					</div>
+				<% }); %>
 			</div>
 
 			<!-- Includes ads -->
