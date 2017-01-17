@@ -150,6 +150,11 @@ img[src="/img/Triangle.png"] {
 	margin-top: 20px;
 }
 
+.recipe-data img {
+	height: 40px;
+	float: left;
+}
+
 .gallery-item:nth-child(even) img {
 	float: right;
 }
