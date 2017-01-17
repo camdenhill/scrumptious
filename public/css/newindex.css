@@ -154,7 +154,7 @@ img[src="/img/Triangle.png"] {
 	height: 10px;
 	width: auto;
 	float: left;
-	padding-right: 10px;
+	padding-right: 5px;
 	margin-top: 3px;
 }
 
@@ -165,6 +165,10 @@ img[src="/img/Triangle.png"] {
 
 .gallery-item:nth-child(even) img {
 	float: right;
+}
+
+.gallery-item:nth-child(even) .recipe-data img {
+	float: left;
 }
 
 aside {
