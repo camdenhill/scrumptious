@@ -300,7 +300,7 @@ exports.getTips = function(callback) {
 		console.log('Connection established');
 	});
 
-	var sql = "SELECT text, date_format(date, '%m/%d/%Y') as date FROM tips ORDER BY date desc limit 3";
+	var sql = "SELECT text, date_format(date, '%M %d, %Y') as date FROM tips ORDER BY date desc limit 3";
 	connection.query(sql, function (err, res) {
 		connection.end();
 		console.log(res);
