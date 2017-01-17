@@ -151,8 +151,10 @@ img[src="/img/Triangle.png"] {
 }
 
 .recipe-data img {
-	height: 40px;
+	height: 15px;
+	width: auto;
 	float: left;
+	padding-right: 10px;
 }
 
 .gallery-item:nth-child(even) img {
