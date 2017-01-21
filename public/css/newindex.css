@@ -34,7 +34,7 @@ nav {
 	height: 20px;
 	display: block;
 	margin: 30px auto;
-	opacity: .3;
+	opacity: 0;
 }
 
 #categories {
