@@ -23,12 +23,17 @@ module.exports = function(app)
 			var galleryTitles = db.getGalleryTitles();
 			db.getGallery(function (err2, gallery) {
 				if (err2) throw err2;
-				db.getTips(function (err3, tips) {
-					res.render('newindex.ejs', {
-						categories : categories,
-						gallery : gallery,
-						galleryTitles : galleryTitles,
-						tips : tips
+				db.getGallery(function, err3, featured) {
+					if (err3) throw err3;
+					db.getTips(function (err4, tips) {
+						if (err4) throw err4;
+						res.render('newindex.ejs', {
+							categories : categories,
+							gallery : gallery,
+							featured : featured,
+							galleryTitles : galleryTitles,
+							tips : tips
+						})
 					})
 				})
 			})

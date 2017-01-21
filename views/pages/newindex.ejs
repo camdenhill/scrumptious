@@ -41,30 +41,24 @@
 			</div>
 		</div>
 
+
 		<div id="featured">
-			<div class="featured-item">
-				<a href="/recipes/3"><img src="/img/recipes/ThaiBroccoliCoconutSoup/square.jpg"></a>
-				<!-- <h1>Thai Broccoli Coconut Soup</h1> -->
-				<!-- <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p> -->
-			</div>
-
-			<div class="featured-item">
-				<a href="/recipes/2"><img src="/img/recipes/PorkChops/square.jpg"></a>
-				<!-- <h1>Thai Broccoli Coconut Soup</h1> -->
-				<!-- <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p> -->
-			</div>
-
-			<div class="featured-item">
-				<a href="/recipes/7"><img src="/img/recipes/NewEnglandClamChowder/square.jpg"></a>
-				<!-- <h1>Thai Broccoli Coconut Soup</h1> -->
-				<!-- <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p> -->
-			</div>
-
-			<div class="featured-item">
-				<a href="/recipes/3"><img src="/img/recipes/ThaiBroccoliCoconutSoup/square.jpg"></a>
-				<!-- <h1>Thai Broccoli Coconut Soup</h1> -->
-				<!-- <p>Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.</p> -->
-			</div>
+			<% featured.forEach(function(feature) { %>
+				<div class="featured-item">
+					<a href="/recipes/<%-feature.recipeID%>"><img src=<%= feature.recipeImg %>></a>
+					<h1><%= feature.recipeName %></h1>
+					<h1><%= feature.recipeName %></h1>
+					<p><%= feature.description %></p>
+					<div class="recipe-data">
+						<img src="/img/Steps.png"/>
+						<h5>12</h5> <!-- gallery[i].stepCount -->
+						<img src="/img/Ingredients.png"/>
+						<h5>10</h5>	<!-- gallery[i].ingredientCount -->			
+						<img src="/img/Clock.png"/>
+						<h5>1:00</h5> <!-- gallery[i].duration -->
+					</div>
+				</div>
+			<% } %>
 		</div>
 	</div>
 
