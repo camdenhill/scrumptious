@@ -23,7 +23,7 @@ module.exports = function(app)
 			var galleryTitles = db.getGalleryTitles();
 			db.getGallery(function (err2, gallery) {
 				if (err2) throw err2;
-				db.getGallery(function, err3, featured) {
+				db.getGallery(function (err3, featured) {
 					if (err3) throw err3;
 					db.getTips(function (err4, tips) {
 						if (err4) throw err4;
