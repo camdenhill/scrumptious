@@ -9,6 +9,9 @@
 	<link href="/css/font-awesome.min.css" rel="stylesheet">
 
 	<link href="/img/Favicon.png" rel="icon"/>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="/js/categories.js"></script>
 </head>
 
 <body>
@@ -17,23 +20,29 @@
 	<div id="categories-and-recipes">
 		<!-- Includes scrolling category -->
 		<div id="top-scroll">
+			<!--
 			<div id="left">
 				<img src="/img/Left.png"/>
 			</div>
+			-->
 
 			<div id="categories">
 				<% categories.forEach(function(category) { %>
 					<div class="category">
-						<a href="#"><img src=<%= category.img %>></a>
-						<h3><%= category.name %></h3>
+						<div class="click">
+							<img src=<%= category.img %>>
+							<h3><%= category.name %></h3>
+						</div>
 						<img src="/img/Triangle.png">
 					</div>
 				<% }); %>
 			</div>
 
+			<!--
 			<div id="right">
 				<img src="/img/Right.png"/>
 			</div>
+			-->
 		</div>
 
 		<div id="featured">

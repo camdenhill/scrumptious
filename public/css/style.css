@@ -65,3 +65,7 @@ img.expand:hover {
 .link {
 	text-decoration: underline;
 }
+
+.click {
+	cursor: pointer;
+}
