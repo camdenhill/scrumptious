@@ -45,7 +45,7 @@
 			<% featured.forEach(function(feature) { %>
 				<div class="featured-item">
 					<a href="/recipes/<%-feature.recipeID%>"><img src=<%= feature.recipeImg %>></a>
-					<div class="reveal gallery-item-info">
+					<div class="reveal padding">
 						<h1><%= feature.recipeName %></h1>
 						<p><%= feature.description %></p>
 						<div class="recipe-data">
@@ -69,7 +69,7 @@
 			<% for (var i=0; i<gallery.length; i++) { %>
 				<div class="gallery-item">
 					<a href="/recipes/<%-gallery[i].recipeID%>"><img src=<%= gallery[i].recipeImg %>></a>
-					<div class="gallery-item-info">
+					<div class="gallery-item-info padding">
 						<h3><%= galleryTitles[i] %></h3>
 						<h1><%= gallery[i].recipeName %></h1>
 						<p><%= gallery[i].description %></p>
