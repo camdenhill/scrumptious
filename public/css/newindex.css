@@ -95,6 +95,12 @@ img[src="/img/Triangle.png"] {
 	min-height: 265px;
 }
 
+.bg {
+	background: rgba(255,255,255,.8);
+	width: 100%;
+	height: 100%;
+}
+
 
 /* GALLERY */
 #gallery-and-aside {
