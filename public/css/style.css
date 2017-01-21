@@ -69,3 +69,7 @@ img.expand:hover {
 .click {
 	cursor: pointer;
 }
+
+.reveal {
+	display: none;
+}

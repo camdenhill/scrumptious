@@ -41,24 +41,25 @@
 			</div>
 		</div>
 
-
 		<div id="featured">
 			<% featured.forEach(function(feature) { %>
 				<div class="featured-item">
 					<a href="/recipes/<%-feature.recipeID%>"><img src=<%= feature.recipeImg %>></a>
-					<h1><%= feature.recipeName %></h1>
-					<h1><%= feature.recipeName %></h1>
-					<p><%= feature.description %></p>
-					<div class="recipe-data">
-						<img src="/img/Steps.png"/>
-						<h5>12</h5> <!-- gallery[i].stepCount -->
-						<img src="/img/Ingredients.png"/>
-						<h5>10</h5>	<!-- gallery[i].ingredientCount -->			
-						<img src="/img/Clock.png"/>
-						<h5>1:00</h5> <!-- gallery[i].duration -->
+					<div class="reveal">
+						<h1><%= feature.recipeName %></h1>
+						<h1><%= feature.recipeName %></h1>
+						<p><%= feature.description %></p>
+						<div class="recipe-data">
+							<img src="/img/Steps.png"/>
+							<h5>12</h5> <!-- gallery[i].stepCount -->
+							<img src="/img/Ingredients.png"/>
+							<h5>10</h5>	<!-- gallery[i].ingredientCount -->			
+							<img src="/img/Clock.png"/>
+							<h5>1:00</h5> <!-- gallery[i].duration -->
+						</div>
 					</div>
 				</div>
-			<% } %>
+			<% }); %>
 		</div>
 	</div>
 
