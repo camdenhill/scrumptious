@@ -86,16 +86,13 @@ ul {
 	list-style: none;
 }
 
-input:focus {
+input:focus, select:focus, textarea:focus {
 	outline: 0;
 }
 
-input[type="text"] {
+input[type="text"], textarea {
 	padding: 5px;
-}
-
-select:focus {
-	outline: 0;
+	border: solid 1px #ddd;
 }
 
 select {

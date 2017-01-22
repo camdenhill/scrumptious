@@ -21,6 +21,10 @@ label, input, textarea {
 	width: 100%;
 }
 
+textarea {
+	height: 100px;
+}
+
 input {
 	margin-bottom: 30px;
 }
