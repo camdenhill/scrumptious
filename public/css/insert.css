@@ -22,15 +22,17 @@ form {
 	float: left;
 }
 
+label {
+	display: inline-block;
+}
+
 #recipe-ingredients label:nth-child(even) {
-	width: 30%;
-	float: left;
+	width: 40%;
+	padding-right: 10px;
 }
 
 #recipe-ingredients label:nth-child(odd) {
-	width: 70%;
-	float: left;
-	color: green;
+	width: 60%;
 }
 
 
