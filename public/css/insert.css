@@ -17,6 +17,11 @@ form {
 	width: 250px;
 }
 
+#recipe-ingredients, #recipe-steps {
+	width: 50%;
+	float: left;
+}
+
 label, input, textarea {
 	width: 100%;
 }

@@ -5,6 +5,7 @@
 	<link href="/css/parent.css" rel="stylesheet" type="text/css"/>
 	<link href="/css/style.css" rel="stylesheet" type="text/css"/>
 	<link href="/css/nav.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/insert.css" rel="stylesheet" type="text/css"/>
 
 	<link href="/img/Favicon.png" rel="icon"/>
 
@@ -13,7 +14,55 @@
 
 <body>
 	<% include ../partials/nav %>
-	steps and ingredients
+	<div class="insert-wrapper">
+		<div class="insert-title">
+			<h3>{ Recipe Name }</h3>
+		</div>
+		<form>
+			<div id="recipe-ingredients">
+				<h3>Ingredients</h3>
+				<label><p>Quantity</p></label>
+				<label><p>Item</p></label>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+			</div>
+			<div id="recipe-steps">
+				<h3>Steps</h3>
+				<label><p>Step Text</p></label>
+				<label><p>Step Start</p></label>
+				<label><p>Step End</p></label>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+				<input type="text"/>
+			</div>
+			<div class="pw-and-submit">
+				<label><p>Auth</p></label>
+				<input type="text" name="auth" id="auth"/>
+
+				<button type="submit" class="dark">Submit</button>				
+			</div>
+		</form>
+	</div>
 	<% include ../partials/footer %>
 </body>
 </html>
