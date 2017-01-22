@@ -17,7 +17,7 @@ form {
 	width: 250px;
 }
 
-label, input {
+label, input, textarea {
 	width: 100%;
 }
 
