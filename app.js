@@ -5,7 +5,7 @@ var db = require('./db.js');
 module.exports = function(app)
 {
 	app.get('/old', function (req, res) {
-		db.getGallery(function (err1, recipes) {
+		db.getRecipeMetadata(function (err1, recipes) {
 			if (err1) throw err1;
 			db.getFeatured(function (err2, featured) {
 				if (err2) throw err2;
@@ -21,9 +21,9 @@ module.exports = function(app)
 		db.getCategories(function (err1, categories) {
 			if (err1) throw err1;
 			var galleryTitles = db.getGalleryTitles();
-			db.getGallery(function (err2, gallery) {
+			db.getRecipeMetadata(function (err2, gallery) {
 				if (err2) throw err2;
-				db.getGallery(function (err3, featured) {
+				db.getRecipeMetadata(function (err3, featured) {
 					if (err3) throw err3;
 					db.getTips(function (err4, tips) {
 						if (err4) throw err4;
@@ -84,7 +84,7 @@ module.exports = function(app)
 	})
 
 	app.post('/inserted-ingredient', function(req, res) {
-		var recipeID, stepText, stepStart, stepEnd, stepDuration;
+		var recipeID, quantity, item;
 		recipeID = req.body.recipeID;
 		quantity = req.body.quantity;
 		item = req.body.item;

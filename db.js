@@ -154,7 +154,7 @@ exports.getRecipe = function(recipeID, callback) {
 /*
 	Get all recipe metadata for recipes in gallery (subset of recipes to be displayed on index)
 */
-exports.getGallery = function(callback) {
+exports.getRecipeMetadata = function(callback) {
 	var galleryList = showcase.gallery;
 
 	connection = mysql.createConnection({
