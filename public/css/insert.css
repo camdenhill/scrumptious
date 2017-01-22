@@ -17,9 +17,14 @@ form {
 	width: 250px;
 }
 
-#recipe-ingredients, #recipe-steps {
-	width: 50%;
+#recipe-ingredients {
+	width: 40%;
 	float: left;
+}
+
+#recipe-steps {
+	width: 60%;
+	float: right;
 }
 
 #recipe-ingredients input, #recipe-steps input {
@@ -31,11 +36,11 @@ label {
 }
 
 #recipe-ingredients label:nth-child(even), #recipe-ingredients input:nth-child(even) {
-	width: 40%;
+	width: 30%;
 }
 
 #recipe-ingredients label:nth-child(odd), #recipe-ingredients input:nth-child(odd) {
-	width: 55%;
+	width: 65%;
 	margin-left: 5px;
 }
 
