@@ -1,11 +1,19 @@
 .insert-wrapper {
-
+	width: 80%;
+	display: block;
+	margin: 100px auto 0;
 }
 
 .insert-title {
+	width: 100%;
+	border-bottom: solid 1px #222;
+	padding-bottom: 10px;
+}
 
+form {
+	margin-top: 50px;
 }
 
 #recipe-information {
-	
+	width: 250px;
 }

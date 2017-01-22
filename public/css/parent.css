@@ -102,14 +102,20 @@ select {
 }
 
 button {
-	padding: 5px 10px;
-	background: #e27191;
+	padding: 5px 15px;
 	background: #ffffff;
-	border: solid 1px black;
+	border: solid 1px #222;
 	border-radius: 0;
-	color: black;
+	color: #222;
 	font-weight: 400;
 	font-size: .8em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+button.light {
+	background: #222;
+	color: white;
 }
 
 button:hover {
