@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scrumptious</title>
+	<link href="/css/parent.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/nav.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/index.css" rel="stylesheet" type="text/css"/>
+	<link href="/css/font-awesome.min.css" rel="stylesheet">
+
+	<link href="/img/Favicon.png" rel="icon"/>
+</head>
+
+<body>
+	<% include ../partials/nav %>
+	<div class="wrapper">	<!-- set width=1000px -->
+		<div class="recipe-gallery">
+			<div class="featured">
+				<% featured.forEach(function(feature) { %>
+					<div>
+						<h2><%= feature.recipeName %></h2>
+						<p class="baskerville"><%= feature.description %></p>
+						<i class="fa fa-clock-o fa-flip-horizontal"></i> <h6>1 hour 15 minutes</h6>
+					</div>
+					<a href="/recipes/<%-feature.recipeID%>"><img src=<%= feature.recipeImg %>></a>
+				<% }); %>
+			</div>
+			<div class="gallery">
+				<% recipes.forEach(function(recipe) { %>
+					<div class="gallery-item">
+						<a href="/recipes/<%-recipe.recipeID%>"><img src=<%= recipe.recipeImg %>></a>
+						<h3><%= recipe.recipeName %></h3>
+						<p class="baskerville"><%= recipe.description %></p>
+					</div>
+				<% }); %>
+			</div>
+		</div>
+	</div>
+	<% include ../partials/footer %>
+</body>
+</html>

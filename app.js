@@ -5,19 +5,6 @@ var showcase = require('./showcase.js')
 
 module.exports = function(app)
 {
-	app.get('/old', function (req, res) {
-		db.getRecipeMetadata(function (err1, recipes) {
-			if (err1) throw err1;
-			db.getFeatured(function (err2, featured) {
-				if (err2) throw err2;
-				res.render('index.ejs', {
-					recipes : recipes,
-					featured : featured
-				})
-			})
-		})
-	})
-
 	app.get('/', function (req, res) {
 		db.getCategories(function (err1, categories) {
 			if (err1) throw err1;
@@ -28,7 +15,7 @@ module.exports = function(app)
 					if (err3) throw err3;
 					db.getTips(function (err4, tips) {
 						if (err4) throw err4;
-						res.render('newindex.ejs', {
+						res.render('index.ejs', {
 							categories : categories,
 							gallery : gallery,
 							featured : featured,
@@ -69,7 +56,11 @@ module.exports = function(app)
 	})
 
 	app.get('/insert', function (req, res) {
-		res.render('insert.ejs')
+		res.render('new-insert.ejs')
+	})
+
+	app.post('/insert-steps-and-ingredients', function (req, res) {
+		res.render('insert-steps-and-ingredients.ejs')
 	})
 
 	app.post('/inserted-step', function(req, res) {
