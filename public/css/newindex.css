@@ -8,6 +8,10 @@ nav {
 	z-index: 101;
 }
 
+h1:hover {
+	text-decoration: underline;
+}
+
 #categories-and-recipes {
 	width: 100%;
 }
