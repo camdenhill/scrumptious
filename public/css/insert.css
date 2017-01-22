@@ -11,6 +11,7 @@
 
 form {
 	margin-top: 50px;
+	width: 100%;
 	display: inline-block;
 }
 
@@ -74,12 +75,7 @@ input {
 }
 
 .pw-and-submit {
-	display: inline-block;
 	float: right;
-}
-
-.pw-and-submit * {
-	float: left;
 }
 
 .pw-and-submit input {
