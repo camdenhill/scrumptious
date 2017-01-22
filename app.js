@@ -77,9 +77,9 @@ module.exports = function(app)
 		stepText = req.body.stepText;
 		stepStart = req.body.stepStart;
 		stepEnd = req.body.stepEnd;
-		stepDuration = req.body.stepDuration;
+		// stepDuration = req.body.stepDuration;
 
-		db.insertRecipeStep(recipeID, stepText, stepStart, stepEnd, stepDuration);
+		db.insertRecipeStep(recipeID, stepText, stepStart, stepEnd/*, stepDuration*/);
 		res.render('success.ejs')
 	})
 
