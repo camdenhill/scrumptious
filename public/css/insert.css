@@ -7,7 +7,6 @@
 .insert-title {
 	width: 100%;
 	border-bottom: solid 1px #222;
-	padding-bottom: 10px;
 }
 
 form {
@@ -20,4 +19,8 @@ form {
 
 label, input {
 	width: 100%;
+}
+
+input {
+	margin-bottom: 30px;
 }
