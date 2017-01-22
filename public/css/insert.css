@@ -28,3 +28,11 @@ textarea {
 input {
 	margin-bottom: 30px;
 }
+
+.pw-and-submit input {
+	width: 250px;
+}
+
+.pw-and-submit * {
+	float: right;
+}
