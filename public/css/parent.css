@@ -37,6 +37,10 @@ h1 {
 	padding: 0 0 20px;
 }
 
+h1:hover {
+	text-decoration: underline;
+}
+
 h2 {
 	font-family: 'Baskerville Bold', serif;
 	text-align: center;

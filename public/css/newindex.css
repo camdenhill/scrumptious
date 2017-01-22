@@ -8,10 +8,6 @@ nav {
 	z-index: 101;
 }
 
-h1:hover {
-	text-decoration: underline;
-}
-
 #categories-and-recipes {
 	width: 100%;
 }
@@ -48,10 +44,6 @@ h1:hover {
 .category {
 	width: 20%;
 	float: left;
-}
-
-.category:hover {
-	opacity: .5;
 }
 
 .category img, .category h3 {

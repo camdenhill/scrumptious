@@ -46,7 +46,7 @@
 				<div class="featured-item">
 					<a href="/recipes/<%-feature.recipeID%>"><img class="recipe-img" src=<%= feature.recipeImg %>></a>
 					<div class="reveal padding">
-						<h1><%= feature.recipeName %></h1>
+						<a href="/recipes/<%-feature.recipeID%>"><h1><%= feature.recipeName %></h1></a>
 						<p><%= feature.description %></p>
 						<div class="recipe-data">
 							<img src="/img/Steps.png"/>
@@ -71,7 +71,7 @@
 					<a href="/recipes/<%-gallery[i].recipeID%>"><img src=<%= gallery[i].recipeImg %>></a>
 					<div class="gallery-item-info padding">
 						<h3><%= galleryTitles[i] %></h3>
-						<h1><%= gallery[i].recipeName %></h1>
+						<a href="/recipes/<%-gallery[i].recipeID%>"><h1><%= gallery[i].recipeName %></h1></a>
 						<p><%= gallery[i].description %></p>
 						<div class="recipe-data">
 							<img src="/img/Steps.png"/>
