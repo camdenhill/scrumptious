@@ -90,6 +90,10 @@ input:focus {
 	outline: 0;
 }
 
+input[type="text"] {
+	padding: 5px;
+}
+
 select:focus {
 	outline: 0;
 }

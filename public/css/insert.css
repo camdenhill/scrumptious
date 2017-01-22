@@ -17,3 +17,7 @@ form {
 #recipe-information {
 	width: 250px;
 }
+
+label, input {
+	width: 100%;
+}
