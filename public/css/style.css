@@ -20,8 +20,13 @@ img[src="/img/Bookmark.png"], img[src="/img/BookmarkOutlines.png"], img[src="/im
 	height: 25px;
 }
 
-span.underline {
+.underline {
 	text-decoration: underline;
+}
+
+.clear {
+	float: none;
+	clear: both;
 }
 
 div.full-width {
