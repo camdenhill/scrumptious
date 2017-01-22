@@ -82,7 +82,7 @@ exports.insertRecipeStep = function(recipeID, stepText, stepStart, stepEnd) {
 		default:
 			seconds = seconds + " seconds";
 	}
-	stepDuration = hours + minutes + seconds;
+	var stepDuration = hours + minutes + seconds;
 	var step = { recipeID: recipeID, stepText: stepText, stepStart: stepStart, stepEnd: stepEnd, stepDuration: stepDuration };
 	var sql = 'INSERT INTO steps SET ?';
 	connection.query(sql, step, function (err, res) {
