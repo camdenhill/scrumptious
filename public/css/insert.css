@@ -18,12 +18,12 @@ form {
 }
 
 #recipe-ingredients {
-	width: 40%;
+	width: 35%;
 	float: left;
 }
 
 #recipe-steps {
-	width: 60%;
+	width: 55%;
 	float: right;
 }
 
@@ -44,6 +44,19 @@ label {
 	margin-left: 5px;
 }
 
+#recipe-steps label:nth-child(3n+0), #recipe-steps input:nth-child(3n+0) {
+	width: 60%;
+}
+
+#recipe-steps label:nth-child(3n+1), #recipe-steps input:nth-child(3n+1) {
+	width: 15%;
+	margin-left: 5px;
+}
+
+#recipe-steps label:nth-child(3n+2), #recipe-steps input:nth-child(3n+2) {
+	width: 15%;
+	margin-left: 5px;
+}
 
 
 label, input, textarea {
