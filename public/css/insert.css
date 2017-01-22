@@ -22,6 +22,10 @@ form {
 	float: left;
 }
 
+#recipe-ingredients input, #recipe-steps input {
+	margin-bottom: 5px;
+}
+
 label {
 	display: inline-block;
 }
