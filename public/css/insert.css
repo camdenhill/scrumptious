@@ -22,6 +22,16 @@ form {
 	float: left;
 }
 
+#recipe-ingredients label:nth-child(odd) {
+	width: 30%;
+}
+
+#recipe-ingredients label:nth-child(even) {
+	width: 70%;
+}
+
+
+
 label, input, textarea {
 	width: 100%;
 }
