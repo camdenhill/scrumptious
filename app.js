@@ -59,7 +59,7 @@ module.exports = function(app)
 		res.render('new-insert.ejs')
 	})
 
-	app.post('/insert-steps-and-ingredients', function (req, res) {
+	app.get('/insert-steps-and-ingredients', function (req, res) {
 		res.render('insert-steps-and-ingredients.ejs')
 	})
 
