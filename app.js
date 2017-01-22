@@ -9,9 +9,9 @@ module.exports = function(app)
 		db.getCategories(function (err1, categories) {
 			if (err1) throw err1;
 			var galleryTitles = db.getGalleryTitles();
-			db.getRecipeMetadata(showcase.gallery, function (err2, gallery) {
+			db.getRecipe(showcase.gallery, function (err2, gallery) {
 				if (err2) throw err2;
-				db.getRecipeMetadata(showcase.featured, function (err3, featured) {
+				db.getRecipe(showcase.featured, function (err3, featured) {
 					if (err3) throw err3;
 					db.getTips(function (err4, tips) {
 						if (err4) throw err4;
@@ -29,10 +29,10 @@ module.exports = function(app)
 	})
 
 	app.get('/recipes/:recipeID', function (req, res) {
-		db.getRecipe(req.params.recipeID, function (err1, ingredients) {
+		db.getIngredients(req.params.recipeID, function (err1, ingredients) {
 			if (err1) throw err1;
 			else {
-				db.getRecipeSteps(req.params.recipeID, function (err2, steps) {
+				db.getSteps(req.params.recipeID, function (err2, steps) {
 					if (err2) throw err2;
 					else {
 						var date = new Date();

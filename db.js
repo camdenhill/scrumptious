@@ -120,11 +120,40 @@ exports.insertRecipeIngredient = function(recipeID, quantity, item) {
 
 
 /*
+	Get all recipe metadata for recipes in gallery (subset of recipes to be displayed on index)
+*/
+exports.getRecipe = function(recipes, callback) {
+	connection = mysql.createConnection({
+		host: config.development.database.host,
+		port: config.development.database.port,
+		user: config.development.database.username,
+		password: config.development.database.password,
+		database: config.development.database.db
+	});
+	
+	connection.connect(function(err) {
+		if (err) {
+			console.log('Error connecting to database');
+			return;
+		}
+		console.log('Connection established');
+	});
+
+	var sql = 'SELECT * FROM metadata WHERE recipeID IN ' + recipes;
+	var data;
+	connection.query(sql, function (err, res) {
+		connection.end();
+		console.log(res);
+		callback(err, res);
+	});
+}
+
+/*
 	The way I set this up is the following:
 	getRecipe returns an inner join on ingredients and metadata;
-	will include list of ingredients as well as color, recipe name.
+	will include list of ingredients as well as recipe name, etc.
 */
-exports.getRecipe = function(recipeID, callback) {
+exports.getIngredients = function(recipeID, callback) {
 	connection = mysql.createConnection({
 		host: config.development.database.host,
 		port: config.development.database.port,
@@ -152,9 +181,10 @@ exports.getRecipe = function(recipeID, callback) {
 
 
 /*
-	Get all recipe metadata for recipes in gallery (subset of recipes to be displayed on index)
+	The way I set this up is the following:
+	getRecipeSteps returns json data containing steps.
 */
-exports.getRecipeMetadata = function(recipes, callback) {
+exports.getSteps = function(recipeID, callback) {
 	connection = mysql.createConnection({
 		host: config.development.database.host,
 		port: config.development.database.port,
@@ -171,11 +201,10 @@ exports.getRecipeMetadata = function(recipes, callback) {
 		console.log('Connection established');
 	});
 
-	var sql = 'SELECT * FROM metadata WHERE recipeID IN ' + recipes;
+	var sql = 'SELECT * FROM steps WHERE steps.recipeID = ? ORDER BY steps.stepStart, steps.stepEnd';
 	var data;
-	connection.query(sql, function (err, res) {
+	connection.query(sql, recipeID, function (err, res) {
 		connection.end();
-		console.log(res);
 		callback(err, res);
 	});
 }
@@ -218,35 +247,6 @@ exports.getFeatured = function(callback) {
 	});
 }
 
-
-/*
-	The way I set this up is the following:
-	getRecipeSteps returns json data containing steps.
-*/
-exports.getRecipeSteps = function(recipeID, callback) {
-	connection = mysql.createConnection({
-		host: config.development.database.host,
-		port: config.development.database.port,
-		user: config.development.database.username,
-		password: config.development.database.password,
-		database: config.development.database.db
-	});
-	
-	connection.connect(function(err) {
-		if (err) {
-			console.log('Error connecting to database');
-			return;
-		}
-		console.log('Connection established');
-	});
-
-	var sql = 'SELECT * FROM steps WHERE steps.recipeID = ? ORDER BY steps.stepStart, steps.stepEnd';
-	var data;
-	connection.query(sql, recipeID, function (err, res) {
-		connection.end();
-		callback(err, res);
-	});
-}
 
 /*
 	getCategories returns the list of categories with their images
