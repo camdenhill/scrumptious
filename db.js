@@ -154,9 +154,7 @@ exports.getRecipe = function(recipeID, callback) {
 /*
 	Get all recipe metadata for recipes in gallery (subset of recipes to be displayed on index)
 */
-exports.getRecipeMetadata = function(callback) {
-	var galleryList = showcase.gallery;
-
+exports.getRecipeMetadata = function(recipes, callback) {
 	connection = mysql.createConnection({
 		host: config.development.database.host,
 		port: config.development.database.port,
@@ -173,7 +171,7 @@ exports.getRecipeMetadata = function(callback) {
 		console.log('Connection established');
 	});
 
-	var sql = 'SELECT * FROM metadata WHERE recipeID IN ' + galleryList;
+	var sql = 'SELECT * FROM metadata WHERE recipeID IN ' + recipes;
 	var data;
 	connection.query(sql, function (err, res) {
 		connection.end();

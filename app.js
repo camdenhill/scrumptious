@@ -1,6 +1,7 @@
 'use strict';
 
 var db = require('./db.js');
+var showcase = require('./showcase.js')
 
 module.exports = function(app)
 {
@@ -21,9 +22,9 @@ module.exports = function(app)
 		db.getCategories(function (err1, categories) {
 			if (err1) throw err1;
 			var galleryTitles = db.getGalleryTitles();
-			db.getRecipeMetadata(function (err2, gallery) {
+			db.getRecipeMetadata(showcase.gallery, function (err2, gallery) {
 				if (err2) throw err2;
-				db.getRecipeMetadata(function (err3, featured) {
+				db.getRecipeMetadata(showcase.featured, function (err3, featured) {
 					if (err3) throw err3;
 					db.getTips(function (err4, tips) {
 						if (err4) throw err4;
