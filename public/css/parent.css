@@ -114,7 +114,7 @@ button {
 	letter-spacing: 1px;
 }
 
-button.light {
+button.dark {
 	background: #222;
 	color: white;
 }
