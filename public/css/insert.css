@@ -76,6 +76,7 @@ input {
 
 .pw-and-submit {
 	float: right;
+	margin-top: 40px;
 }
 
 .pw-and-submit input {
