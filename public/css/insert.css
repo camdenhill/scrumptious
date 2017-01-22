@@ -11,6 +11,7 @@
 
 form {
 	margin-top: 50px;
+	display: inline-block;
 }
 
 #recipe-information {
