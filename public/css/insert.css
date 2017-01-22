@@ -22,18 +22,22 @@ form {
 	float: left;
 }
 
-#recipe-ingredients label:nth-child(odd) {
+#recipe-ingredients label:nth-child(even) {
 	width: 30%;
+	float: left;
 }
 
-#recipe-ingredients label:nth-child(even) {
+#recipe-ingredients label:nth-child(odd) {
 	width: 70%;
+	float: left;
+	color: green;
 }
 
 
 
 label, input, textarea {
 	width: 100%;
+	box-sizing: border-box;
 }
 
 textarea {
