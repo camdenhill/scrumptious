@@ -64,14 +64,13 @@ module.exports = function(app)
 	})
 
 	app.post('/inserted-step', function(req, res) {
-		var recipeID, stepText, stepStart, stepEnd, stepDuration;
+		var recipeID, stepText, stepStart, stepEnd;
 		recipeID = req.body.recipeID;
 		stepText = req.body.stepText;
 		stepStart = req.body.stepStart;
 		stepEnd = req.body.stepEnd;
-		// stepDuration = req.body.stepDuration;
 
-		db.insertRecipeStep(recipeID, stepText, stepStart, stepEnd/*, stepDuration*/);
+		db.insertRecipeStep(recipeID, stepText, stepStart, stepEnd);
 		res.render('success.ejs')
 	})
 
