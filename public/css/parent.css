@@ -92,7 +92,7 @@ input:focus, select:focus, textarea:focus {
 
 input[type="text"], textarea {
 	padding: 5px;
-	border: solid 1px #ddd;
+	border: solid 1px #222;
 }
 
 select {

@@ -29,6 +29,11 @@ input {
 	margin-bottom: 30px;
 }
 
+.pw-and-submit {
+	display: inline-block;
+	float: right;
+}
+
 .pw-and-submit * {
 	float: left;
 }
