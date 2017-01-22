@@ -28,11 +28,11 @@ label {
 
 #recipe-ingredients label:nth-child(even) {
 	width: 40%;
-	padding-right: 10px;
 }
 
 #recipe-ingredients label:nth-child(odd) {
-	width: 60%;
+	width: 55%;
+	float: right;
 }
 
 
