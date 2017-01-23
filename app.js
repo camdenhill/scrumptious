@@ -63,6 +63,14 @@ module.exports = function(app)
 		res.render('insert-steps-and-ingredients.ejs')
 	})
 
+	app.post('/inserted-recipe', function (req, res) {
+		db.insertRecipe(req.body, function (err, recipeID) {
+			res.render('insert-steps-and-ingredients.ejs', {
+				recipeID : recipeID
+			})
+		});
+	})
+
 	app.post('/inserted-step', function(req, res) {
 		var recipeID, stepText, stepStart, stepEnd;
 		recipeID = req.body.recipeID;
@@ -74,7 +82,7 @@ module.exports = function(app)
 		res.render('success.ejs')
 	})
 
-	app.post('/inserted-ingredient', function(req, res) {
+	app.post('/inserted-ingredient', function (req, res) {
 		var recipeID, quantity, item;
 		recipeID = req.body.recipeID;
 		quantity = req.body.quantity;
@@ -84,7 +92,7 @@ module.exports = function(app)
 		res.render('success.ejs')
 	})
 
-	app.use(function(req, res, next) {
+	app.use(function (req, res, next) {
 		res.status(404).render('404.ejs');
 	});
 }

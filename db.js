@@ -6,7 +6,13 @@ var showcase = require('./showcase.js')
 
 var connection;
 
-exports.insertRecipeMetadata = function(colorHex, recipeName, recipeSource) {
+exports.insertRecipe = function(metadata) {
+	var recipeName, recipeSource, recipeImg, description;
+	recipeName = metadata.recipeName;
+	recipeSource = metadata.recipeSource;
+	recipeImg = metadata.recipeImg;
+	description = metadata.description;
+
 	connection = mysql.createConnection({
 		host: config.development.database.host,
 		port: config.development.database.port,
@@ -23,13 +29,14 @@ exports.insertRecipeMetadata = function(colorHex, recipeName, recipeSource) {
 		console.log('Connection established');
 	});
 
-	var recipe = { colorHex: colorHex, recipeName: recipeName, recipeSource: recipeSource };
+	var recipe = { recipeName: recipeName, recipeSource: recipeSource, recipeImg: recipeImg, description: description };
 	var sql = 'INSERT INTO metadata SET ?';
 	connection.query(sql, recipe, function (err, res) {
 		if (err) throw err;
-		console.log('Successful');
+		console.log(res.recipeID);
+		connection.end();
+		callback(err, res.recipeID);
 	});
-	connection.end();
 }
 
 exports.insertRecipeStep = function(recipeID, stepText, stepStart, stepEnd) {
