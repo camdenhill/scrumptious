@@ -6,7 +6,7 @@ var showcase = require('./showcase.js')
 
 var connection;
 
-exports.insertRecipe = function(metadata) {
+exports.insertRecipe = function(metadata, callback) {
 	var recipeName, recipeSource, recipeImg, description;
 	recipeName = metadata.recipeName;
 	recipeSource = metadata.recipeSource;
