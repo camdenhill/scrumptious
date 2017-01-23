@@ -33,9 +33,9 @@ exports.insertRecipe = function(metadata, callback) {
 	var sql = 'INSERT INTO metadata SET ?';
 	connection.query(sql, recipe, function (err, res) {
 		if (err) throw err;
-		console.log(res.recipeID);
+		console.log(res.insertId);
 		connection.end();
-		callback(err, res.recipeID);
+		callback(err, res.insertId);
 	});
 }
 
