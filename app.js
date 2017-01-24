@@ -64,16 +64,16 @@ module.exports = function(app)
 	})
 
 	app.post('/inserted-recipe', function (req, res) {
-		console.log(req.body.auth);
 		if (req.body.auth == 'Moorpark1') {
-			console.log('PW');
+			db.insertRecipe(req.body, function (err, recipeID) {
+				res.render('insert-steps-and-ingredients.ejs', {
+					recipeID : recipeID,
+					recipeName : req.body.recipeName
+				})
+			});
+		} else {
+			res.redirect('/insert');
 		}
-		db.insertRecipe(req.body, function (err, recipeID) {
-			res.render('insert-steps-and-ingredients.ejs', {
-				recipeID : recipeID,
-				recipeName : req.body.recipeName
-			})
-		});
 	})
 
 	app.post('/inserted-step', function(req, res) {
